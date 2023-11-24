@@ -1,0 +1,97 @@
+<!--pages/foodChoice/zhengcan/zhengcan.wxml-->
+<view class='container'>
+  <image class='image' src='/images/niupai.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>牛排</text>
+    <text class='danwei'>5.40千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit1' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/baozi.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>包子</text>
+    <text class='danwei'>10.0千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit2' style="position: relative; left: -11rpx; top: 30rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/jirou.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>鸡肉</text>
+    <text class='danwei'>7.00千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit3' style="position: relative; left: -11rpx; top: -2rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/miantiao.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>面条</text>
+    <text class='danwei'>11.0千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit4' style="position: relative; left: -11rpx; top: 30rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/rice.png' mode='widthFix' style="width: 218rpx; height: 200rpx; display: block; box-sizing: border-box"></image>
+  <view class='discription'>
+    <text>米饭</text>
+    <text class='danwei'>5.20千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit5' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/jiaozi.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>饺子</text>
+    <text class='danwei'>4.20千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit6' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/qingcai.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>青菜</text>
+    <text class='danwei'>0.17千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit7' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/fish.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>鱼</text>
+    <text class='danwei'>1.08千卡/克</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit8' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='mask' catchtouchmove='preventTouchMove'wx:if="{{showModal}}"></view>
+<view class='modalDlg' wx:if="{{showModal}}">
+  <view style='display:flex;flex-direction:row;mardin-top:10px;align-items:center;height: 350px'>
+    <view style='font-weight:bold;'>摄入重量：</view>
+    <view style='display:flex;flex-direction:row'>
+      <input type='number' style='border:1px solid #cccccc;width:60px;'bindinput='inputWalk'></input>
+      <view style='font-weight:bold;'>克</view>
+    </view>
+  </view>
+  <view >
+    <button bindtap='addZhengcan2'>确定添加</button>
+    <button bindtap='go'> 取消</button>
+  </view>
+</view>
+
+

@@ -1,0 +1,33 @@
+<!--pages/ucenter/targetwalk/targetwalk.wxml-->
+
+<view class="container">
+<form catchsubmit="formSubmit" catchreset="formReset">
+<view class="walk">
+  <text>目标步数</text>
+  <picker value="{{targetwalk}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
+     <view class="real">{{targetwalk}}步数</view> 
+</picker>
+</view>
+<view class="calore">
+  <text>热量消耗</text>
+  <picker value="{{calore}}" range="{{calorerange}}" bindchange="calorePickerBindchange">  
+     <view class="real">{{calore}}Calore</view>
+</picker>  
+</view>
+<view class="time">
+  <text>专注时间</text>
+  <picker value="{{time}}" range="{{timerange}}" bindchange="timePickerBindchange">  
+     <view class="real">{{timerange[time]}}分钟</view>
+</picker>  
+</view>
+<!-- <view class="age">
+  <text>年龄</text>
+  <picker value="{{age}}" range="{{agerange}}" bindchange="datePickerBindchange">  
+     <view class="real">{{agerange[age]}}岁</view> 
+</picker>
+</view> -->
+<button formType='reset'>保存</button>
+</form>
+</view>
+
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

@@ -1,0 +1,109 @@
+<!--index.wxml-->
+<!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar" bindtap="bindViewTap">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
+<view>
+
+    <view class='feet_progress_box'>
+        <text class="feet_progress_top">步数 </text>
+        <text class="feet_progress_time">{{Time}}</text>
+       <button bindtap="go_to_feet" class="feet_detail" style="width: 150rpx;height: 60rpx;" > 
+       </button>
+       <image src="/pages/sport/images/arrow.png"class="arrow_pic"></image>
+       <view class="feet_progress_round">
+          <canvas class="feet_progress_bg"   canvas-id="feet_canvasProgressbg">  </canvas>
+          <canvas class="feet_progress_canvas"   canvas-id="feet_canvasProgress">  </canvas>
+          <view class="feet_progress_text">
+              <image class="feet_progress_picture" src="/pages/sport/images/feet_picture.jpg" mode="aspectFill"></image>
+              <text class='feet_progress_info'> {{feet_count}}</text>
+          </view>
+       </view>   
+       <view class="feet_text">
+            <text class="feet_count">步数距离<text class="feet_text_num1">    {{feet_kilo}}    </text>公里</text>
+            <text class="feet_consume">步数消耗<text class="feet_text_num2">    {{feet_consume}}    </text>千卡 </text>
+       </view>
+   </view>
+   <view class='sport_progress_box'>
+        <text class="sport_progress_top">运动 </text>
+        <text class="sport_progress_time">{{Date}} </text>
+        <button bindtap="go_to_sport" class="feet_detail" style="width: 150rpx;height: 60rpx;" > 
+       </button>
+       <image src="/pages/sport/images/arrow.png"class="arrow_pic"></image>
+       <view class="sport_progress_round">
+          <canvas class="sport_progress_bg"   canvas-id="sport_canvasProgressbg">  </canvas>
+          <canvas class="sport_progress_canvas"   canvas-id="sport_canvasProgress">  </canvas>
+          <view class="sport_progress_text">
+              <image class="sport_progress_picture" src="/pages/sport/images/sport_picture.png" mode="aspectFill"></image>
+              <text class='sport_progress_info'> {{sport_consume}}</text>
+          </view>
+       </view>   
+       <view class="sport_text">
+            <image class="sport_rec1" src="/pages/sport/images/rectangle.png"> </image>
+            <image class="sport_rec2" src="/pages/sport/images/rectangle.png"> </image>
+            <text class="sport_rec1_text">不足</text>
+            <text class="sport_rec2_text">合格</text>
+            <progress class="sport_count"show-info="true"font-size="27rpx" activeColor='rgb(241, 73, 73)'border-radius="15rpx"stroke-width='25rpx'   percent="{{sport_percent}}"> </progress>
+            <text class="sport_consume">燃烧脂肪<text class="sport_text_num2">    {{fat_consume}}    </text>千克 </text>
+       </view>
+   </view>
+   <view class='body_box'>
+        <text class="body_top">身体</text>
+        <text class="sport_progress_time">{{Year}}</text>
+        <!-- <button bindtap="Ontext" class="sport_detail" style="width: 150rpx;height: 60rpx;" > 详情
+        </button> -->
+      <view class="body_detail">
+			  <view class="body_height">
+				<text class="body_height1">身高</text>
+				<text class="body_height2">{{height}} <text class="body_height3">cm</text> </text>
+				<image class="body_ruler" src="/pages/sport/images/height.png"></image>
+			  </view>
+			  <view class="body_divide"></view>
+        <view class="body_weight">
+				<text class="body_weight1">体重</text>
+				<text class="body_weight2">{{weight}} <text class="body_weight3">kg</text> </text>
+				<image class="body_weightscale" src="/pages/sport/images/weightscale.png"></image>
+		    </view>
+      </view>
+	  <!-- <view class="body_bmi_divide"> </view> -->
+	  <view class="body_bmi">
+		<view class="body_bmi_num">
+			<text class="body_bmi_num1">B</text>
+			<text class="body_bmi_num2">m</text>
+			<text class="body_bmi_num3">i</text>
+			<text class="body_bmi_num4">{{bmi}}</text>
+		</view>
+		<view class="body_bmi_range">
+			<text class="body_bmi_range1">18</text>
+			<text class="body_bmi_range2">23</text>
+			<text class="body_bmi_range3">28</text>
+		</view>
+		<image class="body_bmi_pic" src="/pages/sport/images/Bmi.png"></image>
+
+    
+      </view>
+          
+      
+         
+       
+   </view>
+
+</view>

@@ -1,0 +1,28 @@
+.container{
+  background-color: rgb(253, 253, 253);
+}
+.run_charts_box{
+  position: absolute;
+  top: 70rpx;
+  width:100%;
+}
+.canvas {
+  width: 100%;
+  height: calc(100vw - 10px);
+}
+.container2{
+  position: relative;
+  top: 500rpx;
+}
+.text1{
+  position: absolute;
+  left: 100rpx;
+  top: 20rpx;
+  font-size: 40rpx;
+}
+.text2{
+  position: absolute;
+  left: 100rpx;
+  top: 80rpx;
+  font-size: 40rpx;
+}

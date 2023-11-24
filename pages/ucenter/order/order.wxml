@@ -1,0 +1,60 @@
+<!--pages/ucenter/order/order.wxml-->
+<van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
+  <van-tab title="全部"></van-tab>
+  <van-tab title="全部"></van-tab>
+  <van-tab title="全部"></van-tab>
+  <van-tab title="全部"></van-tab>
+  <van-tab title="全部"></van-tab>
+</van-tabs>
+
+<!-- 加载中 -->
+<view wx:if="{{loading}}" class="loading-center">
+  <van-loading type="spinner" />
+</view>
+
+<!-- 填充 -->
+<view class="no-order" wx:if="{{orderList.length == 0&&!loading}}">
+  <image class="img" src="/assets/noOrder.png"></image>
+
+</view>
+
+
+
+<!--编辑个人信息-->
+<view class="container">
+<form catchsubmit="formSubmit" catchreset="formReset">
+<view class="sex">
+  <text>性别</text>
+  <picker value="{{sex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">  
+     <view class="real">{{sexrange[sex]}}性</view> 
+</picker>
+</view>
+<view class="height">
+  <text>身高</text>
+  <picker value="{{height}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
+     <view class="real">{{height}}厘米</view>
+</picker>  
+</view>
+<view class="weight">
+  <text>体重</text>
+  <picker value="{{weight}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
+     <view class="real">{{weight}}公斤</view>
+</picker>  
+</view>
+<view class="age">
+  <text>年龄</text>
+  <picker value="{{age}}" range="{{agerange}}" bindchange="datePickerBindchange">  
+     <view class="real">{{agerange[age]}}岁</view> 
+</picker>
+</view>
+<view class="walk">
+  <text>当前步数</text>
+  <picker value="{{walk}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
+     <view class="real">{{walk}}步</view> 
+</picker>
+</view>
+<button formType='reset'>保存</button>
+</form>
+</view>
+
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

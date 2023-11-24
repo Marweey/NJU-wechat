@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="run_charts_box">
+    <canvas canvas-id="canvas1" class = "canvas"></canvas>
+  </view>
+</view>
+<view class="container2">
+    <view class="text1"> 
+    <text>近7日总步数为     </text>
+    <text >43000</text>
+    </view>
+    <view class="text2">
+    <text>消耗热量   </text>
+    <text>1023千卡</text>
+    </view>
+</view>

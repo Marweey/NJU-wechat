@@ -1,0 +1,49 @@
+/* pages/todayDiet/todayDiet.wxss */
+.timeAxis{
+  background: #fff;
+}
+.timeList{
+  background: #fff;
+  margin:5px 50px 5px 50px;
+}
+.timeLine{
+  margin-left: 5px;
+  border-left: 1px solid #ddd;
+  height: 100px;
+  background: #fff;
+}
+.timeCircle{
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 10px;
+  height: 10px;
+  border-color: #F596AA;
+}
+.timeTime{
+  float: left;
+  font-size:14px;
+  padding-left: 15px;
+  width: 72px;
+}
+.timeEvent{
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.timeName{
+  font-size:14px;
+  height:23px;
+  margin-left: 100px;
+}
+.button {
+    margin-top: 20rpx;
+    margin-bottom: 30rpx;
+    border: 0;
+    background-color: #09fada79;
+    font-size: 13px;
+    text-align: center;
+    font-weight: lighter;
+    width: 24rem;
+    height: 2rem;
+    line-height: 65rpx;
+  }
+ 

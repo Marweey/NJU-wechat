@@ -1,0 +1,93 @@
+{
+  "pages": [
+    "pages/ucenter/index/index",
+    "pages/sport/sport",
+    "pages/eat/eat",
+    "pages/eat/add_eat/addeat",
+    "pages/eat/today_eat/today_eat",
+    "pages/eat/add_eat/drinks/drinks",
+    "pages/eat/add_eat/lingshi/lingshi",
+    "pages/eat/add_eat/zhengcan/zhengcan",
+    "pages/eat/add_eat/shuiguo/shuiguo",
+    "pages/auth/tologin/tologin",
+    "pages/auth/mobile-login/mobile-login",
+    "pages/auth/pass-login/pass-login",
+    "pages/ucenter/order/order",
+    "pages/ucenter/coupon/coupon",
+    "pages/ucenter/red/red",
+    "pages/ucenter/setting/setting",
+    "pages/ucenter/targetwalk/targetwalk",
+    "pages/sport/sport_page_1/sport_page_1",
+    "pages/sport/logs/logs",
+    "pages/sport/sport_page_2/sport_page_2",
+    "pages/sport/sport_page_3/sport_page_3",
+    "pages/clock/clock"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#1d1d1d",
+    "navigationBarTitleText": "XMall",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f4f4"
+  },
+  "tabBar": {
+    "color": "#9a9a9a",
+    "selectedColor": "#666",
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/sport/sport_page_1/sport_page_1",
+        "text": "运动",
+        "iconPath": "assets/sportunselected.png",
+        "selectedIconPath": "assets/sport.png"
+      },
+      {
+        "pagePath": "pages/clock/clock",
+        "text": "番茄",
+        "iconPath": "assets/tomatounselected.png",
+        "selectedIconPath": "assets/tomato.png"
+      },
+      {
+        "pagePath": "pages/eat/eat",
+        "text": "饮食",
+        "iconPath": "assets/foodunselected.png",
+        "selectedIconPath": "assets/food.png"
+      },
+      {
+        "pagePath": "pages/ucenter/index/index",
+        "text": "我的",
+        "iconPath": "assets/me.png",
+        "selectedIconPath": "assets/meSelected.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "lib/vant-weapp/button/index",
+    "van-dialog": "lib/vant-weapp/dialog/index",
+    "van-field": "lib/vant-weapp/field/index",
+    "van-tab": "lib/vant-weapp/tab/index",
+    "van-tabs": "lib/vant-weapp/tabs/index",
+    "van-loading": "lib/vant-weapp/loading/index",
+    "van-checkbox": "lib/vant-weapp/checkbox/index",
+    "van-icon": "lib/vant-weapp/icon/index",
+    "van-search": "lib/vant-weapp/search/index",
+    "van-toast": "lib/vant-weapp/toast/index",
+    "van-tag": "lib/vant-weapp/tag/index",
+    "van-cell": "lib/vant-weapp/cell/index",
+    "van-cell-group": "lib/vant-weapp/cell-group/index",
+    "van-popup": "lib/vant-weapp/popup/index",
+    "van-area": "lib/vant-weapp/area/index",
+    "van-steps": "lib/vant-weapp/steps/index",
+    "van-switch": "lib/vant-weapp/switch/index",
+    "wux-toptips": "lib/wux-weapp/toptips/index",
+    "wux-filterbar": "lib/wux-weapp/filterbar/index",
+    "wux-upload": "lib/wux-weapp/upload/index",
+    "i-icon": "lib/iview-weapp/icon/index",
+    "i-badge": "lib/iview-weapp/badge/index",
+    "i-input-number": "lib/iview-weapp/input-number/index",
+    "i-swipeout": "lib/iview-weapp/swipeout/index",
+    "i-avatar": "lib/iview-weapp/avatar/index",
+    "i-rate": "lib/iview-weapp/rate/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,30 @@
+.a{
+  position: relative;
+  top: rpx;
+  border-width: 10rpx;
+  border-radius: 10rpx;
+  border-bottom:10rpx;
+}
+.consume_input{
+  position: relative;
+  top: 40rpx;
+  width: 70%;
+  left: 8rpx;
+  height: 70rpx;
+  background-color: rgb(255, 255, 255);
+  border: 3rpx solid black;
+  font-weight: lighter;
+}
+.tip{
+  position: relative;
+  top:30rpx;
+  left: 20rpx;
+  font-size: 22rpx;
+  font-weight: lighter;
+}
+.wehx-foot-btn{
+  position: absolute;
+  top: 80rpx;
+  right: 20rpx;
+  background-color: rgb(243, 239, 239);
+}

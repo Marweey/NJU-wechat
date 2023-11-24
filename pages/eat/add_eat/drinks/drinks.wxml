@@ -1,0 +1,98 @@
+<!--pages/foodChoice/drinks/drinks.wxml-->
+<view class='container'>
+
+  <image class='image' src='/images/drink.jpg' mode='widthFix'></image>
+  <view class='discription'>
+    <text>健康果汁</text>
+    <text class='danwei'>0.2千卡/毫升</text>
+  </view>
+  <button class="jiaBtn" bindtap='submit1' style="position: relative; left: -6rpx; top: 30rpx"> 
+    <image  class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/coke.jpg' mode='widthFix'></image>
+  <view class='discription'>
+    <text>肥宅可乐</text>
+    <text class='danwei'>1.8千卡/毫升</text>
+  </view>
+  <button class="jiaBtn" bindtap='submit2' style="position: relative; left: -6rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view>  </view>
+<view class='container'>
+  <image class='image' src='/images/kafei.png' mode='widthFix' style="width: 220rpx; height: 198rpx; display: block; box-sizing: border-box"></image>
+  <view class='discription'>
+    <text>咖啡</text>
+    <text class='danwei'>2.0千卡/毫升</text>
+  </view>
+  <button class="jiaBtn" bindtap='submit3' style="position: relative; left: -6rpx; top: 30rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/milk.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>牛奶</text>
+    <text class='danwei'>0.7千卡/毫升</text>
+  </view>
+  <button class="jiaBtn" bindtap='submit4' style="position: relative; left: -6rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/naicha.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>奶茶</text>
+    <text class='danwei'>0.4千卡/毫升</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit6' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/jiu.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>酒</text>
+    <text class='danwei'>0.35千卡/毫升</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit7' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/doujiang.png' mode='widthFix'></image>
+  <view class='discription'>
+    <text>豆浆</text>
+    <text class='danwei'>0.15千卡/毫升</text>
+  </view>
+  <button class="jiaBtn"bindtap='submit8' style="position: relative; left: -11rpx; top: 0rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+<view class='container'>
+  <image class='image' src='/images/suannai.png' mode='widthFix' style="width: 218rpx; height: 228rpx; display: block; box-sizing: border-box"></image>
+  <view class='discription'>
+    <text>酸奶</text>
+    <text class='danwei'>3.0千卡/毫升</text>
+  </view>
+  <button class="jiaBtn" bindtap='submit5' style="position: relative; left: -7rpx; top: 29rpx"> 
+    <image class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+  </button>
+</view>
+
+<view class='mask' catchtouchmove='preventTouchMove'wx:if="{{showModal}}"></view>
+<view class='modalDlg' wx:if="{{showModal}}">
+  <view style='display:flex;flex-direction:row;mardin-top:10px;align-items:center;height: 350px'>
+    <view style='font-weight:bold;'>摄入体积：</view>
+    <view style='display:flex;flex-direction:row'>
+      <input type='number' style='border:1px solid #cccccc;width:60px;'bindinput='inputWalk'></input>
+      <view style='font-weight:bold;'>毫升</view>
+    </view>
+  </view>
+  <view >
+    <button bindtap='addJuice2'>确定添加</button>
+    <button bindtap='go'> 取消</button>
+  </view>
+</view>

@@ -1,0 +1,459 @@
+/* index.wxss */
+/* .userinfo {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+} */
+page{
+  background-color: rgb(212, 205, 205) ;
+}
+.feet_progress_box{
+  position: relative;
+  top: 20rpx;
+  left: 10rpx;
+  width: 97%;
+  height: 440rpx;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  border: 20rpx rgb(221, 137, 10);
+ }
+ .feet_progress_top{
+  position: absolute;
+  top:15rpx;
+  left: 30rpx;
+  font-size: 38rpx;
+ }
+ .feet_progress_time{
+  position: absolute;
+  top:30rpx;
+  left: 120rpx;
+  font-size: 25rpx;
+  color: darkgray;
+ }
+.feet_detail{
+  position: absolute;
+  opacity: 0.2;
+  top: 10rpx;
+  right: 10rpx;
+  font-size: 20rpx;
+  text-align: right;
+  align-items: center;
+  flex-direction: row;
+  z-index: 2;
+ }
+ .arrow_pic{
+   position: absolute;
+   top: 10rpx;
+   right: 10rpx;
+   width: 100rpx;
+   height: 40rpx;
+   z-index: 1;
+ }
+ .feet_progress_round{
+  position: absolute;
+  top: 70rpx;
+  left: 10rpx;
+  width:300rpx;
+  height: 320rpx;
+  /* background-color: rgb(145, 136, 136); */
+}
+.feet_progress_bg{
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  width:220px;
+  height: 220px;
+ }
+.feet_progress_canvas{
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  width:220px;
+  height: 220px;
+ }
+/* .feet_progress_text{
+  position: absolute;
+  top: 165rpx;
+  left: 105rpx;
+  display: flex;  
+  align-items: center;
+  justify-content: center
+ } */
+.feet_progress_info{
+ 
+  position: absolute;
+  top: 210rpx;  
+  left: 72rpx;
+  font-size: 36rpx;
+  width: 180rpx;
+  text-align: center;
+ }
+.feet_progress_picture{
+  top: 120rpx;
+  position: absolute;
+  left: 125rpx;
+  width: 80rpx;
+  height: 80rpx;  
+  background-color:rgb(243, 239, 239) ;
+ }
+ .feet_text{
+  position: absolute;
+  top:180rpx;
+  right: 20rpx;
+
+  width: 380rpx;
+  height: 240rpx;
+  /* background-color: coral; */
+ }
+ .feet_count{
+  position: absolute;
+  right: 1rpx;
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+  font-size: 35rpx;
+ }
+ .feet_consume{
+   position: absolute;
+   top:80rpx;
+   right: 1rpx;
+  width: 400rpx;
+  height: 80rpx;
+  text-align: center;
+   font-size: 35rpx;
+   /* background: cyan; */
+ }
+ .feet_text_num1{
+   font-size: 40rpx;
+   font-weight: bold;
+   color: rgb(253, 164, 29);
+ }
+ .feet_text_num2{
+  font-size: 40rpx;
+  font-weight: bold;
+  color:  rgb(253, 164, 29)
+}
+
+.sport_progress_box{
+  position: relative;
+  top: 30rpx;
+  background-color: rgb(255, 255, 255);
+  left: 10rpx;
+  width: 97%;
+  height: 440rpx;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.sport_progress_top{
+  position: absolute;
+  top:15rpx;
+  left: 30rpx;
+  font-size: 38rpx;
+ }
+ .sport_progress_time{
+  position: absolute;
+  top:30rpx;
+  left: 120rpx;
+  font-size: 25rpx;
+  color: darkgray;
+ }
+.sport_detail{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  font-size: 20rpx;
+  text-align: right;
+  align-items: center;
+  flex-direction: row;
+  /* background-color: rgb(50, 165, 180); */
+ }
+ .sport_progress_round{
+  position: absolute;
+  top: 70rpx;
+  left: 10rpx;
+  width:300rpx;
+  height: 320rpx;
+  /* background-color: rgb(145, 136, 136); */
+}
+.sport_progress_bg{
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  width:220px;
+  height: 220px;
+ }
+.sport_progress_canvas{
+  position: absolute;
+  top: 45rpx;
+  left: 20rpx;
+  width:220px;
+  height: 220px;
+ }
+/* .sport_progress_text{
+  position: absolute;
+  top: 165rpx;
+  left: 105rpx;
+  display: flex;  
+  align-items: center;
+  justify-content: center
+ } */
+.sport_progress_info{
+
+  position: absolute;
+  top: 210rpx;  
+  left: 72rpx;
+  font-size: 36rpx;
+  width: 180rpx;
+  text-align: center;
+  
+ }
+.sport_progress_picture{
+  top: 120rpx;
+  position: absolute;
+  left: 125rpx;
+  width: 80rpx;
+  height: 80rpx;  
+  background-color:rgb(243, 239, 239) ;
+ }
+ .sport_text{
+  position: absolute;
+  top:130rpx;
+  right: 20rpx;
+  width: 380rpx;
+  height: 300rpx;
+  /* background-color: darkgrey; */
+  
+ }
+ .sport_count{
+  position: absolute;
+  top:10rpx;
+  left: 50rpx;
+  width: 320rpx;
+  height: 80rpx;
+  /* background: crimson; */
+ }
+ .sport_consume{
+   position: absolute;
+   top:160rpx;
+   left: 50rpx;
+   width: 320rpx;
+   height: 80rpx;
+   font-size: 35rpx;
+   /* background: cyan; */
+ }
+ 
+ .sport_text_num2{
+  font-size: 40rpx;
+  font-weight: bold;
+  color: rgb(241, 73, 73);
+}
+.sport_rec1{
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  left: 120rpx;
+  top: 16rpx;
+}
+.sport_rec2{
+  position: absolute;
+  width: 20rpx;
+  height: 20rpx;
+  left: 197rpx;
+  top: 16rpx;
+}
+.sport_rec1_text{
+  position: absolute;
+  font-size: 20rpx;
+  left: 115rpx;
+  top: 68rpx;
+}
+.sport_rec2_text{
+  position: absolute;
+  font-size: 18rpx;
+  left: 188rpx;
+  top: 70rpx;
+}
+.body_box{
+  position: relative;
+  top: 40rpx;
+  background-color: rgb(255, 255, 255);
+  left: 10rpx;
+  width: 97%;
+  height: 480rpx;  
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+}
+.body_top{
+  position: absolute;
+  top:15rpx;
+  left: 30rpx;
+  font-size: 38rpx;
+}
+.body_detail{
+  position: absolute;
+  top: 70rpx;
+  height: 2rpx;
+  width: 98%;
+  /* background-color: darkgrey; */
+}
+.body_height{
+  top: 10rpx;
+  right: 20rpx;
+  position: absolute;
+  height: 220rpx;
+  width: 320rpx;
+  /* background-color: brown; */
+}
+.body_height1{
+  position: absolute;
+  top: 40rpx;
+  left: 80rpx;
+}
+.body_height2{
+  position: absolute;
+  top: 110rpx;
+  font-size: 50rpx;
+  right: 186rpx;
+}
+.body_height3{
+  position: absolute;
+  top: 23rpx;
+  left: 100rpx;
+  font-size: 30rpx;
+}
+.body_divide{
+  position: absolute;
+  left: 50%;
+  background-color: rgb(122, 113, 113);
+  height: 240rpx;
+  width: 4rpx;
+}
+.body_ruler{
+  position: absolute;
+  top: 10rpx;
+  right: 10rpx;
+  width: 80rpx;
+  height: 210rpx;
+}
+.body_weight{
+  top: 10rpx;
+  left: 20rpx;
+  position: absolute;
+  height: 220rpx;
+  width: 320rpx;
+  /* background-color: brown; */
+}
+.body_weight1{
+  position: absolute;
+  top: 40rpx;
+  right: 80rpx;
+}
+.body_weight2{
+  position: absolute;
+  top: 110rpx;
+  font-size: 50rpx;
+  left: 160rpx;
+}
+.body_weight3{
+  position: absolute;
+  top: 23rpx;
+  left: 70rpx;
+  font-size: 30rpx;
+}
+
+.body_weightscale{
+  position: absolute;
+  top: 50rpx;
+  width: 120rpx;
+  height: 120rpx;
+}
+/* .body_bmi_divide{
+  position: absolute;
+  top: 310rpx;
+  width: 100%;
+  height: 4rpx;
+  background-color: black;
+} */
+.body_bmi{
+  position: absolute;
+  top: 315rpx;
+  /* background-color: rgb(143, 130, 130); */
+  width: 100%;
+  height: 160rpx;
+}
+.body_bmi_num{
+  position: absolute;
+  top:6rpx;
+  left: 20rpx;
+  
+}
+.body_bmi_num1{
+  color:rgb(18, 110, 214);
+  
+}
+.body_bmi_num2{
+  color: rgb(8, 119, 8);
+  
+}
+.body_bmi_num3{
+  color: orange;
+  
+}
+.body_bmi_num4{
+  position: absolute;
+  top: 6rpx;
+  left: 80rpx;
+  font-size: 28rpx;
+  color: coral;
+  
+}
+.body_bmi_pic{
+  position: absolute;
+  top: 80rpx;
+  width: 100%;
+  height: 80rpx;
+}
+.body_bmi_range{
+  position: absolute;
+  top: 60rpx;
+  width: 100%;
+  height: 20rpx;
+  font-size: 18rpx;
+  /* background-color: darkcyan; */
+}
+
+.body_bmi_range1{
+  position: absolute;
+  left: 180rpx;
+  color: gray;
+}
+.body_bmi_range2{
+  position: absolute;
+  left: 354rpx;
+  color: gray;
+  
+}
+.body_bmi_range3{
+  position: absolute;
+  left: 530rpx;
+  color: gray;
+  
+}

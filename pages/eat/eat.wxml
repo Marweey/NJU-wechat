@@ -1,0 +1,51 @@
+
+<view class='container'>
+  <view class='tab-wrapper'>
+    <view id='tableft' class='tab-left {{currentTab === 0 ? "tab-active":""}}' bindtap='switchTab'>添加食物</view>
+    <view id='tabright' class='tab-right {{currentTab === 1 ? "tab-active" : ""}}' bindtap='switchTab'>今日摄入</view>
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 0}}'>
+    <add_eat/>
+  </view>
+  <view class='content-wrapper' wx:if='{{currentTab === 1}}'>
+    <today_eat/>
+    <view class='timeAxis'>
+    
+    <block>
+      <view class='timeList'>
+        <view class='timeCircle'></view>
+        <view class='timeLine'>
+          <view class='timeTime'>饮料</view>
+          <view class='timeEvent'>{{foodCa1}}千卡</view>
+        </view>
+      </view>
+      <view class='timeList'>
+        <view class='timeCircle'></view>
+        <view class='timeLine'>
+          <view class='timeTime'>零食</view>
+          <view class='timeEvent'>{{foodCa2}}千卡</view>
+        </view>
+      </view>
+      <view class='timeList'>
+        <view class='timeCircle'></view>
+        <view class='timeLine'>
+          <view class='timeTime'>水果</view>
+          <view class='timeEvent'>{{foodCa3}}千卡</view>
+        </view>
+      </view>
+      <view class='timeList'>
+        <view class='timeCircle'></view>
+        <view class='timeLine'>
+          <view class='timeTime'>正餐</view>
+          <view class='timeEvent'>{{foodCa4}}千卡</view>
+        </view>
+      </view>
+      
+      <view class="button" bindtap='clear'>
+          <text>清除数据</text>
+      </view>
+    </block>
+      
+  </view>
+  </view>
+</view>

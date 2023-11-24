@@ -1,0 +1,23 @@
+
+.container{
+  display:flex;
+  flex-direction:row;
+}
+.discription{
+  display:flex;
+  flex-direction:column;
+}
+.image{
+  width: 220rpx;
+}
+.jiaBtn{
+  width: 10rem;
+  height: 5rem;
+  background-color: #ffffff;
+}
+.jiahao{
+  width: 120rpx;
+}
+.danwei{
+    font-size: 13px;
+}

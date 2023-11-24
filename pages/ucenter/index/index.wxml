@@ -1,0 +1,138 @@
+<!--pages/ucenter/index/index.wxml-->
+<view class="ucenter">
+  <view class="profile-info" bindtap="toLogin">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <text class="name">{{userInfo.nickName}}</text>
+      <text class="level">{{userInfo.username}}</text>
+    </view>
+    <view class="vip" wx:if="{{isLogin}}" animation="{{ani}}" bindtap="toVip">
+      <image src="/assets/vip.png" class="img" />
+      <view class="word">
+        <view class="line1"></view>
+        <view class="line2">
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="order-wrap">
+    <view class="order-header">
+      <text class="txt">我的信息</text>
+      <view class="right" id="0" bindtap="toOrder">
+        <text class="all">查看全部</text>
+        <image class="arrow" src="/assets/rightArrow.png"></image>
+      </view>
+    </view>
+    <view class="order-icon">
+      
+      <view class="icon-wrap" id="4" bindtap="toOrder">
+        <i-badge count="{{order.comment}}">
+          <image class="icon" src="/assets/sex.png"></image>
+        </i-badge>
+        <text class="txt">性别</text>
+      </view>
+      <view class="icon-wrap" id="2" bindtap="toOrder">
+        <i-badge count="{{order.toSend}}">
+          <image class="icon" src="/assets/height.png"></image>
+        </i-badge>
+        <text class="txt">身高</text>
+      </view>
+      <view class="icon-wrap" id="3" bindtap="toOrder">
+        <i-badge count="{{order.send}}">
+          <image class="icon" src="/assets/weight.png"></image>
+        </i-badge>
+        <text class="txt">体重</text>
+      </view>
+      <view class="icon-wrap" id="1" bindtap="toOrder">
+        <image class="icon" src="/assets/age.png"></image>
+        <text class="txt">年龄</text>
+      </view>
+      <view class="icon-wrap" id="3" bindtap="toOrder">
+        <i-badge count="{{order.afterSale}}">
+          <image class="icon" src="/assets/walk.png"></image>
+        </i-badge>
+        <text class="txt">当前步数</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- <view class="order-wrap">
+    <view class="order-header">
+      <text class="txt">我的统计</text>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap" bindtap="toCoupon">
+        <text class="num">{{wallet.coupon}}</text>
+        <text class="txt">步数</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.point}}</text>
+        <text class="txt">热量</text>
+      </view>
+      <view class="icon-wrap" bindtap="toRed">
+        <text class="num">{{wallet.red}}</text>
+        <text class="txt">专注时间</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.allowance}}</text>
+        <text class="txt">津贴</text>
+      </view>
+      <view class="icon-wrap">
+        <text class="num">{{wallet.gift}}</text>
+        <text class="txt">礼品卡</text>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="service-wrap">
+    <view class="order-header">
+      <text class="txt">我的计划</text>
+    </view>
+    <view class="order-icon">
+      <view class="icon-wrap" bindtap="toTargetwalk">
+        <image class="icon" src="/assets/walk.png"></image>
+        <text class="txt">目标步数</text>
+      </view>
+      <view class="icon-wrap" bindtap="toTargetwalk">
+        <image class="icon" src="/assets/calore.png"></image>
+        <text class="txt">热量消耗</text>
+      </view>
+      <view class="icon-wrap" bindtap="toTargetwalk">
+        <image class="icon" src="/assets/time.png"></image>
+        <text class="txt">专注时间</text>
+      </view>
+      <!-- <view class="icon-wrap" bindtap="toAddress">
+        <image class="icon" src="/assets/address.png"></image>
+        <text class="txt">地址管理</text>
+      </view> -->
+    </view>
+    <view class="order-icon">
+      <!-- <view class="icon-wrap">
+        <button open-type="contact" hover-class="none" class="wxbtn">
+          <image class="icon wx" src="/assets/service.png"></image>
+          <text class="txt">联系客服</text>
+        </button>
+      </view> -->
+      <view class="icon-wrap">
+      <button open-type="contact" hover-class="none" class="wxbtn">
+        <image class="icon" src="/assets/help.png"></image>
+        <text class="txt">帮助中心</text>
+      </button>
+      </view>
+      <view class="icon-wrap">
+        <button open-type="feedback" hover-class="none" class="wxbtn">
+          <image class="icon wx" src="/assets/feedback.png"></image>
+          <text class="txt">用户反馈</text>
+        </button>
+      </view>
+      <view class="icon-wrap" bindtap="toSetting">
+        <image class="icon" src="/assets/setting.png"></image>
+        <text class="txt">设置</text>
+      </view>
+    </view>
+
+  </view>
+
+  <navigator url="../../auth/tologin/tologin" class="logout" wx:if="{{isLogin}}">切换账号</navigator>
+</view>

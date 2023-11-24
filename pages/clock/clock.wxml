@@ -1,0 +1,83 @@
+<!--pages/clock/clock.wxml-->
+<!--计时时钟，在showClock为false时显示-->
+<view hidden="{{showClock || showLog}}">
+  <!--滚动条，用于选择专注时间，从1分钟到60分钟-->
+  <view class="slider">
+    <slider min="1" max="60" show-value="true" activeColor="#E7624F" backgroundColor="#666666" value="{{time}}" bindchange="sliderChange">
+    </slider>
+  </view>
+
+  <view class="task_text">
+    <view class="task_title">选择一个任务</view>
+    <view class="task_desc">接下来的{{time}}分钟内，你将专注于这件事</view>
+  </view>
+
+  <view class="task_cate">
+    <view wx:for="{{cateArr}}" class="cate_item" wx:key="cate" bindtap="clickCate" data-index="{{index}}">
+      <view class="cate_icon">
+        <image src="./images/{{item.icon}}.png"></image>
+      </view>
+      <view class='cate_text {{index == cateActive ? "cate_text_active":""}}'>
+      {{item.text}}
+      </view>
+    </view>
+
+    <view class="start" bindtap="start">
+    开始专注
+    </view>
+
+    <view class="logs" bindtap="log">
+    查看统计
+    </view>
+  </view>
+</view>
+
+<!--时钟-->
+<view class="clock" hidden="{{!showClock}}" style="height:{{clockHeight}}rpx">
+  <view class="progress">
+    <canvas canvas-id="progress_bg" class="progress_bg">
+    </canvas>
+    <canvas canvas-id="progress_active" class="progress_active">
+    </canvas>
+    <view class="progress_text">
+      {{timeStr}}
+    </view>
+  </view>
+  <view class="btns">
+		<view class="okBtn" bindtap="ok" wx:if="{{okShow}}">返回</view>
+		<view class="pauseBtn" bindtap="pause" wx:if="{{pauseShow}}">暂停</view>
+		<view class="continueAndCancelBtn" wx:if="{{continueAndCancelShow}}">
+			<view class="continueBtn" bindtap="continue">继续</view>
+			<view class="cancelBtn" bindtap="cancel">放弃</view>
+		</view>
+	</view>
+</view>
+
+<!--统计页面-->
+<view class='log' hidden="{{!showLog}}">
+  <view class="sum">
+    <view class="sum_item">
+      <view class="sum_item_title">专注次数</view>
+      <view class="sum_item_val">{{count}}次</view>
+    </view>
+    <view class="sum_item">
+      <view class="sum_item_title">专注时长</view>
+      <view class="sum_item_val">{{sum}}分钟</view>
+    </view>
+  </view>
+
+  <view class="detail">
+    <view class="detail_list" wx:if="{{statistics.length > 0}}">
+      <view class="list_item" wx:for="{{statistics}}">
+        <view class="list_item_date">{{item.date}}</view>
+        <view class="list_item_cate">{{item.cate}}</view>
+        <view class="list_item_duration">{{item.duration}}分钟</view>
+      </view>
+    </view>
+    <view class="detail_list" wx:else>
+      您还没有专注过
+    </view>
+  </view>
+
+  <view class="logs" bindtap="back">返回首页</view>
+</view>

@@ -1,0 +1,38 @@
+<view>
+  <text>已消耗热量</text>
+  <text >   {{exist_consume}}</text>
+  <text>     kcal</text>
+	<!-- <text class="a"> 添加热量消耗(kcal)</text> -->
+  <form bindsubmit="_bindconfirm">
+    <input class="consume_input" auto-focus type="number"  name="consume" placeholder="请输入新增消耗量"    />
+    <button class="wehx-foot-btn" style="width: 160rpx; font-size: 25rpx; height: 70rpx;" formType="submit">确定</button>
+  </form>
+  <text class="tip">
+  各运动参考热量
+    🚶快走
+  每半小时消耗约276kcal
+🏊‍♀️游泳
+每半小时消耗约260kcal
+🧗‍♀️爬山
+每半小时消耗约250kcal。
+🏃‍♀️慢跑
+每半小时约240kcal
+🕺登楼梯
+每半小时消耗约175kcal
+💕溜冰
+每半小时消耗的热量≥175kcal
+❣️转呼啦圈
+每半小时消耗的热量≥150kcal
+🥎打网球
+每半小时消耗的热量≥212kcal
+🚴‍♀️骑单车
+每半小时消耗的热量≥207kcal
+🤸‍♂️有氧健身操
+每半小时消耗的热量≥180kcal。
+🌟站立
+每半小时消耗的热量60kcal。靠墙站立是消耗热量最多的站立方式
+🚶‍♂️慢走
+半小时消耗约128kcal，
+🚶‍♀️散步
+每半小时消耗约97kcal</text>
+</view>
