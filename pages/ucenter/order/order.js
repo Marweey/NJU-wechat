@@ -77,6 +77,16 @@ Page({
         walk:this.data.walk
     })
   },
+  saveSuccess: function(e) {
+    Dialog.alert({
+      message: '保存成功'
+    }).then(() => {
+      // 返回上一级
+      wx.navigateBack({
+        delta: 1
+      })
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */

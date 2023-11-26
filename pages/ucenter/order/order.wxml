@@ -53,7 +53,7 @@
      <view class="real">{{walk}}步</view> 
 </picker>
 </view>
-<button formType='reset'>保存</button>
+<button formType='reset' bind:tap="saveSuccess">保存</button>
 </form>
 </view>
 
