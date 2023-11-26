@@ -7,7 +7,7 @@
       <button class='btn' bindtap='gotodrinks'>饮料</button>
     </view>
     <view class='lingshi'>
-      <image src='/images/lingshi.png' mode='widthFix' bindtap='gotolingshi'></image>
+      <image src='/images/lingshi1.png' mode='widthFix' bindtap='gotolingshi'></image>
       <button class='btn' bindtap='gotolingshi'>零食</button>
     </view>
   </view>

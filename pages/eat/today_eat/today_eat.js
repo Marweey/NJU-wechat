@@ -21,11 +21,15 @@ Page({
 
   },
   clear: function() {
-    wx.clearStorage({
+    const keys = ['yinliao','lingshi','shuiguo','zhengcan'];
+
+    keys.forEach(key => {
+      wx.removeStorageSync(key);
       success: (res) => {
         Toast("清除成功");
-      },
-    })
+      }
+    });
+    
     this.setData({
       foodCa1: wx.getStorageSync('yinliao') > 0 ? wx.getStorageSync('yinliao') : 0,
       foodCa2: wx.getStorageSync('lingshi') > 0 ? wx.getStorageSync('lingshi') : 0,

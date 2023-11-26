@@ -7,7 +7,7 @@
     <text class='danwei'>0.2千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit1' style="position: relative; left: -6rpx; top: 30rpx"> 
-    <image  class='jiahao' src='/images/jia.png' mode='widthFix'></image>
+    <image  class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
 <view class='container'>

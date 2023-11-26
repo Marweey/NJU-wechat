@@ -27,7 +27,15 @@ Page({
     }
   },
   clear: function() {
-    wx.clearStorage();
+    const keys = ['yinliao','lingshi','shuiguo','zhengcan'];
+
+    keys.forEach(key => {
+      wx.removeStorageSync(key);
+      success: (res) => {
+        Toast("清除成功");
+      }
+    });
+    
     wx.showToast({
       title: '清除成功',
     })
