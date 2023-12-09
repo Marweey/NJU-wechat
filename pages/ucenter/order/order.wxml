@@ -32,13 +32,13 @@
 <view class="height">
   <text>身高</text>
   <picker value="{{height}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
-     <view class="real">{{height}}厘米</view>
+     <view class="real">{{heightRange[height]}}厘米</view>
 </picker>  
 </view>
 <view class="weight">
   <text>体重</text>
   <picker value="{{weight}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
-     <view class="real">{{weight}}公斤</view>
+     <view class="real">{{weightRange[weight]}}公斤</view>
 </picker>  
 </view>
 <view class="age">
@@ -50,7 +50,7 @@
 <view class="walk">
   <text>当前步数</text>
   <picker value="{{walk}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
-     <view class="real">{{walk}}步</view> 
+     <view class="real">{{walkrange[walk]}}步</view> 
 </picker>
 </view>
 <button formType='reset' bind:tap="saveSuccess">保存</button>

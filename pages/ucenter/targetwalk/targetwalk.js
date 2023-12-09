@@ -1,4 +1,5 @@
 // pages/ucenter/targetwalk/targetwalk.js
+import Dialog from '../../../lib/vant-weapp/dialog/dialog';
 Page({
 
   /**
@@ -17,14 +18,14 @@ Page({
   walkPickerBindchange: function (e) {
     this.data.targetwalk = e.detail.value
   this.setData({
-    targetwalk: parseInt(this.data.targetwalk)*100,
+    targetwalk: parseInt(this.data.targetwalk),
   })
   wx.setStorageSync('targetwalk', this.data.targetwalk)
 },
   calorePickerBindchange: function (e) {
     this.data.calore = e.detail.value
   this.setData({
-    calore: parseInt(this.data.calore)*100,
+    calore: parseInt(this.data.calore),
   })
   wx.setStorageSync('calore', this.data.calore)
 },
@@ -35,6 +36,17 @@ timePickerBindchange: function (e) {
   })
   wx.setStorageSync('time', this.data.time)
 },
+saveSuccess: function(e) {
+  Dialog.alert({
+    message: '保存成功'
+  }).then(() => {
+    // 返回上一级
+    wx.navigateBack({
+      delta: 1
+    })
+  });
+},
+
   /**
    * 生命周期函数--监听页面加载
    */

@@ -38,7 +38,7 @@ Page({
   heightPickerBindchange: function (e) {
     this.data.height = e.detail.value
     this.setData({
-      height: parseInt(this.data.height)+140
+      height: parseInt(this.data.height)
     })
     wx.setStorageSync('height', this.data.height)
     // this.formReset
@@ -46,14 +46,14 @@ Page({
   weightPickerBindchange: function (e) {
     this.data.weight = e.detail.value
     this.setData({
-      weight: parseInt(this.data.weight)+30
+      weight: parseInt(this.data.weight)
     })
     wx.setStorageSync('weight', this.data.weight)
   },
   walkPickerBindchange: function (e) {
     this.data.walk = e.detail.value
     this.setData({
-      walk: parseInt(this.data.walk)*100
+      walk: parseInt(this.data.walk)
     })
     wx.setStorageSync('walk', this.data.walk)
   },
