@@ -26,7 +26,7 @@
      <view class="real">{{agerange[age]}}岁</view> 
 </picker>
 </view> -->
-<button formType='reset' bind:tap="saveSuccess">保存</button>
+<button bind:tap="saveSuccess">保存</button>
 </form>
 </view>
 

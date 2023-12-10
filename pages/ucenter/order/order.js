@@ -38,18 +38,18 @@ Page({
       sex: this.data.sexrange[e.detail.value],
       sexIndex: e.detail.value,
     })
-    wx.setStorageSync('sex', this.data.sex),
-    wx.setStorageSync('sexIndex', this.data.sexIndex)
+
     // this.formReset
   },
   heightPickerBindchange: function (e) {
     // this.data.height = e.detail.value
+    console.log(this.data.heightRange[e.detail.value])
     this.setData({
       height: this.data.heightRange[e.detail.value],
       heightIndex: e.detail.value,
     })
-    wx.setStorageSync('height', this.data.height),
-    wx.setStorageSync('heightIndex', this.data.heightIndex)
+    console.log(this.data.height)
+
     // this.formReset
   },
   weightPickerBindchange: function (e) {
@@ -58,8 +58,8 @@ Page({
       weight: this.data.weightRange[e.detail.value],
       weightIndex: e.detail.value,
     })
-    wx.setStorageSync('weight', this.data.weight),
-    wx.setStorageSync('weightIndex', this.data.weightIndex)
+    console.log(this.data.height)
+
   },
   walkPickerBindchange: function (e) {
     // this.data.walk = e.detail.value
@@ -67,16 +67,14 @@ Page({
       walk: this.data.walkrange[e.detail.value],
       walkIndex: e.detail.value,
     })
-    wx.setStorageSync('walk', this.data.walk),
-    wx.setStorageSync('walkIndex', this.data.walkIndex)
+
   },
   datePickerBindchange: function (e) {
     this.setData({
       age: this.data.agerange[e.detail.value],
       ageIndex: e.detail.value,
     })
-    wx.setStorageSync('age', this.data.age),
-    wx.setStorageSync('ageIndex', this.data.ageIndex)
+
   },
   formReset: function(e) {
     this.data.sex = wx.getStorageSync('sex'),
@@ -93,6 +91,18 @@ Page({
     })
   },
   saveSuccess: function(e) {
+    console.log(this.data.height)
+    wx.setStorageSync('sex', this.data.sex),
+    wx.setStorageSync('sexIndex', this.data.sexIndex),
+    wx.setStorageSync('height', this.data.height),
+    wx.setStorageSync('heightIndex', this.data.heightIndex),
+    wx.setStorageSync('weight', this.data.weight),
+    wx.setStorageSync('weightIndex', this.data.weightIndex),
+    wx.setStorageSync('walk', this.data.walk),
+    wx.setStorageSync('walkIndex', this.data.walkIndex),
+    wx.setStorageSync('age', this.data.age),
+    wx.setStorageSync('ageIndex', this.data.ageIndex),
+
     Dialog.alert({
       message: '保存成功'
     }).then(() => {

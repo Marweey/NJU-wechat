@@ -25,8 +25,7 @@ Page({
     targetwalk: this.data.walkrange[e.detail.value],
     targetwalkIndex: e.detail.value,
   })
-  wx.setStorageSync('targetwalk', this.data.targetwalk),
-  wx.setStorageSync('targetwalkIndex', this.data.targetwalkIndex)
+
 },
   calorePickerBindchange: function (e) {
   // this.data.calore = e.detail.value
@@ -34,8 +33,7 @@ Page({
     calore: this.data.calorerange[e.detail.value],
     caloreIndex: e.detail.value,
   })
-  wx.setStorageSync('calore', this.data.calore),
-  wx.setStorageSync('caloreIndex', this.data.caloreIndex)
+
 },
 timePickerBindchange: function (e) {
   // this.data.time = e.detail.value
@@ -43,10 +41,16 @@ timePickerBindchange: function (e) {
     time: this.data.timerange[e.detail.value],
     timeIndex: e.detail.value,
   })
-  wx.setStorageSync('time', this.data.time),
-  wx.setStorageSync('timeIndex', this.data.timeIndex)
+
 },
 saveSuccess: function(e) {
+  wx.setStorageSync('targetwalk', this.data.targetwalk),
+  wx.setStorageSync('targetwalkIndex', this.data.targetwalkIndex),
+  wx.setStorageSync('calore', this.data.calore),
+  wx.setStorageSync('caloreIndex', this.data.caloreIndex),
+  wx.setStorageSync('time', this.data.time),
+  wx.setStorageSync('timeIndex', this.data.timeIndex),
+
   Dialog.alert({
     message: '保存成功'
   }).then(() => {
