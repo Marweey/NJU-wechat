@@ -4,20 +4,20 @@
 <form catchsubmit="formSubmit" catchreset="formReset">
 <view class="walk">
   <text>目标步数</text>
-  <picker value="{{targetwalk}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
-     <view class="real">{{walkrange[targetwalk]}}步数</view> 
+  <picker value="{{targetwalkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
+     <view class="real">{{targetwalk}}步数</view> 
 </picker>
 </view>
 <view class="calore">
   <text>热量消耗</text>
-  <picker value="{{calore}}" range="{{calorerange}}" bindchange="calorePickerBindchange">  
-     <view class="real">{{calorerange[calore]}}Calore</view>
+  <picker value="{{caloreIndex}}" range="{{calorerange}}" bindchange="calorePickerBindchange">  
+     <view class="real">{{calore}}Calore</view>
 </picker>  
 </view>
 <view class="time">
   <text>专注时间</text>
-  <picker value="{{time}}" range="{{timerange}}" bindchange="timePickerBindchange">  
-     <view class="real">{{timerange[time]}}分钟</view>
+  <picker value="{{timeIndex}}" range="{{timerange}}" bindchange="timePickerBindchange">  
+     <view class="real">{{time}}分钟</view>
 </picker>  
 </view>
 <!-- <view class="age">

@@ -12,29 +12,39 @@ Page({
 
     targetwalk : wx.getStorageSync('targetwalk'),
     calore : wx.getStorageSync('calore'),
-    time : wx.getStorageSync('time')
+    time : wx.getStorageSync('time'),
+
+    targetwalkIndex : wx.getStorageSync('targetwalkIndex'),
+    caloreIndex : wx.getStorageSync('caloreIndex'),
+    timeIndex : wx.getStorageSync('timeIndex'),
   },
 
   walkPickerBindchange: function (e) {
-    this.data.targetwalk = e.detail.value
+  // this.data.targetwalk = e.detail.value
   this.setData({
-    targetwalk: parseInt(this.data.targetwalk),
+    targetwalk: this.data.walkrange[e.detail.value],
+    targetwalkIndex: e.detail.value,
   })
-  wx.setStorageSync('targetwalk', this.data.targetwalk)
+  wx.setStorageSync('targetwalk', this.data.targetwalk),
+  wx.setStorageSync('targetwalkIndex', this.data.targetwalkIndex)
 },
   calorePickerBindchange: function (e) {
-    this.data.calore = e.detail.value
+  // this.data.calore = e.detail.value
   this.setData({
-    calore: parseInt(this.data.calore),
+    calore: this.data.calorerange[e.detail.value],
+    caloreIndex: e.detail.value,
   })
-  wx.setStorageSync('calore', this.data.calore)
+  wx.setStorageSync('calore', this.data.calore),
+  wx.setStorageSync('caloreIndex', this.data.caloreIndex)
 },
 timePickerBindchange: function (e) {
-    this.data.time = e.detail.value
+  // this.data.time = e.detail.value
   this.setData({
-    time: this.data.time,
+    time: this.data.timerange[e.detail.value],
+    timeIndex: e.detail.value,
   })
-  wx.setStorageSync('time', this.data.time)
+  wx.setStorageSync('time', this.data.time),
+  wx.setStorageSync('timeIndex', this.data.timeIndex)
 },
 saveSuccess: function(e) {
   Dialog.alert({
@@ -70,7 +80,11 @@ saveSuccess: function(e) {
     this.setData({
       targetwalk : wx.getStorageSync('targetwalk'),
       calore : wx.getStorageSync('calore'),
-      time : wx.getStorageSync('time')
+      time : wx.getStorageSync('time'),
+
+      targetwalkIndex : wx.getStorageSync('targetwalkIndex'),
+      caloreIndex : wx.getStorageSync('caloreIndex'),
+      timeIndex : wx.getStorageSync('timeIndex'),
     })
   },
 
