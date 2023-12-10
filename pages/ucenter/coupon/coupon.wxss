@@ -5,14 +5,16 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #f0f0f0;
+  background-size: cover;
+  background-repeat: no-repeat; 
 }
 
 .title {
   font-size: 24px;
   font-weight: bold;
-  color: #333333;
+  color: #ffffff;
   margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .form {
@@ -22,7 +24,7 @@
   justify-content: center;
   width: 80%;
   height: 60%;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -41,7 +43,8 @@
   height: 80px;
   border-radius: 50%;
   border: 2px solid #cccccc;
-  position: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .avatar-text {
@@ -58,15 +61,31 @@
   height: 20%;
 }
 
+/* 添加下划线效果，调整字体样式等 */
 .nickname-input {
   width: 100%;
   height: 40px;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 2px solid #1aad19;  /* 下划线颜色 */
   padding: 10px;
-  font-size: 18px;
+  font-size: 16px;  /* 调整字体大小 */
   color: #333333;
+  text-align: center;
+  outline: none;  /* 移除默认的边框 */
 }
+
+/* 提示文字样式 */
+::placeholder {
+  color: #999999;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* 聚焦时的下划线效果 */
+.nickname-input:focus {
+  border-bottom: 2px solid #333333;  /* 聚焦时的颜色 */
+}
+
 
 .submit {
   display: flex;

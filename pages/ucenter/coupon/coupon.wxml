@@ -1,6 +1,6 @@
 <!--pages/ucenter/coupon/coupon.wxml-->
-<view class="container">
-  <view class="title">微信昵称填写表单</view>
+<view class="container" style="background-image: url({{background}})">
+  <view class="title">昵称和头像设置</view>
   <view class="form">
     <view class="avatar">
       <button open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
@@ -8,11 +8,11 @@
       </button>
       <text class="avatar-text">点击选择头像</text>
     </view>
-    <view class="nickname">
-      <input type="nickname" placeholder="请输入昵称" name="nickname" class="nickname-input" value="{{nickname}}"/>
-    </view>
-    <view class="submit">
-      <button form-type="submit" type="primary" class="submit-button">提交</button>
-    </view>
+      <view class="nickname">
+        <input type="nickname" placeholder="请输入昵称" name="nickname" class="nickname-input" model:value="{{nickname}}"/>
+      </view>
+      <view class="submit">
+        <button form-type="submit" type="primary" data-nickname="{{nickname}}" class="submit-button" bind:tap="formSubmit">提交</button>
+      </view>
   </view>
 </view>

@@ -2,7 +2,6 @@
 import Toast from '../../../lib/vant-weapp/toast/toast';
 
 const app = getApp()
-// const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
  
  
 Page({
@@ -13,6 +12,7 @@ Page({
     avatarUrl: app.globalData.userInfo.avatarUrl,
     theme: wx.getSystemInfoSync().theme,
     nickname: app.globalData.userInfo.nickName,
+    background: "/assets/background4setting.png",
   },
  
   onChooseAvatar(e) {
@@ -21,11 +21,11 @@ Page({
     this.setData({
       avatarUrl,
     })
-    app.globalData.userInfo.avatarUrl = avatarUrl
    
   },
   formSubmit(e) {
-    const nickname = e.detail.value.nickname
+    console.log(e)
+    let nickname = e.currentTarget.dataset.nickname
     // 检测昵称是否为空
     if (!nickname.trim()) {
       // 如果昵称为空，弹出提示
@@ -37,8 +37,10 @@ Page({
       return // 阻止表单提交
     }
     // 如果昵称不为空，更新全局数据并跳转
+    console.log(nickname)
     app.globalData.userInfo.nickName = nickname
-    wx.switchTab({
+    app.globalData.userInfo.avatarUrl = this.data.avatarUrl
+    wx.reLaunch({
       url: '/pages/ucenter/index/index',
     })
   },
@@ -58,6 +60,13 @@ Page({
       avatarUrl: app.globalData.userInfo.avatarUrl,
       nickname: app.globalData.userInfo.nickName
     })
+
+    let base64 = wx.getFileSystemManager().readFileSync(this.data.background, 'base64');
+    this.setData({
+     'background': 'data:image/png;base64,' + base64
+    });
+
+
   },
 
   // /**
