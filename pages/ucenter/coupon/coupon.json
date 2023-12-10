@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "coupon": "/component/coupon/coupon"
-  }
+  },
+  "navigationBarTitleText": "自定义昵称与头像"
 }

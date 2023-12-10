@@ -1,76 +1,34 @@
 /* pages/ucenter/coupon/coupon.wxss */
 
-.header {
-  position: fixed;
-  top: 0;
-  width: 750rpx;
-  z-index: 10;
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
 }
-
-.input-wrap {
-  background: #fff;
-  height: 120rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 32rpx;
-}
-
-.input-box {
-  width: 480rpx;
+ 
+.avatar {
   display: block;
-  border: 1px solid #f4f4f4;
+  width: 56px;
+  height: 56px;
 }
-
-.van-cell {
-  padding: 5px 10px !important;
-  font-size: 13px !important;
-}
-
-.van-button--small {
-  height: 35px !important;
-  line-height: 33px !important;
-  min-width: 85px !important;
-}
-
-.coupon-wrap {
+ 
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
 }
-
-.coupon-wrap .item {
-  margin-bottom: 30rpx;
+.row{
+   border-top: 1px solid #ccc;
+   border-bottom: 1px solid #ccc;
+   display: flex;
+   align-items: center;
+   height: 80rpx;
+   padding-left: 20rpx;
 }
-
-.empty {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30vh;
+.text1{
+    flex: 2;
 }
-
-.empty .img {
-  width: 250rpx;
-  height: 250rpx;
-}
-
-.empty .txt {
-  font-size: 28rpx;
-  color: #999;
-}
-
-.notuse {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  width: 750rpx;
-  height: 100rpx;
-  color: #333;
-  background: #fff;
-  font-size: 26rpx;
+.weui-input{
+    flex: 6;
 }

@@ -50,14 +50,14 @@ Page({
     // 页面显示
     if (userInfo && isLogin) {
       this.setData({
-        userInfo: userInfo,
+        userInfo: app.globalData.userInfo,
         isLogin: isLogin
       });
     } else {
       // 未登录信息
       this.setData({
         userInfo: app.globalData.userInfo,
-        isLogin: true
+        isLogin: isLogin
       });
     }
     // 动画
@@ -174,5 +174,14 @@ Page({
       url: '/pages/ucenter/targetwalk/targetwalk',
     })
     }
-  }
+  },
+  toVip: function () {
+    this.checkLogin();
+    if(this.data.isLogin){
+      // console.log(app.globalData.userInfo.avatarUrl),
+      wx.navigateTo({
+      url: '/pages/ucenter/coupon/coupon',
+    })
+    }
+  },
 })

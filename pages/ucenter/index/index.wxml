@@ -8,7 +8,7 @@
     </view>
     <view class="vip" wx:if="{{isLogin}}" animation="{{ani}}" bindtap="toVip">
       <image src="/assets/vip.png" class="img" />
-      <text>已登录</text>
+      <text>个性化</text>
       <view class="word">
         <view class="line1"></view>
         <view class="line2">

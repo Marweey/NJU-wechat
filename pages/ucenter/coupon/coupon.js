@@ -1,30 +1,75 @@
 // pages/ucenter/coupon/coupon.js
 import Toast from '../../../lib/vant-weapp/toast/toast';
 
+const app = getApp()
+// const defaultAvatarUrl = 'https://mmbiz.qpic.cn/mmbiz/icTdbqWNOwNRna42FI242Lcia07jQodd2FJGIYQfG0LAJGFxM4FbnQP6yfMxBgJ0F3YRqJCJ1aPAK2dQagdusBZg/0'
+ 
+ 
 Page({
-
-  /**
+/**
    * 页面的初始数据
    */
   data: {
-    mode: "",
-    active: 0,
-    disabled: true,
-    value: "",
-    couponList: [],
-    coupon: []
+    avatarUrl: app.globalData.userInfo.avatarUrl,
+    theme: wx.getSystemInfoSync().theme,
+    nickname: app.globalData.userInfo.nickName,
   },
-
+ 
+  onChooseAvatar(e) {
+    const { avatarUrl } = e.detail
+  //  console.log(e.detail),
+    this.setData({
+      avatarUrl,
+    })
+    app.globalData.userInfo.avatarUrl = avatarUrl
+   
+  },
+  formSubmit(e) {
+    const nickname = e.detail.value.nickname
+    // 检测昵称是否为空
+    if (!nickname.trim()) {
+      // 如果昵称为空，弹出提示
+      wx.showToast({
+        title: '昵称不能为空',
+        icon: 'none',
+        duration: 2000
+      })
+      return // 阻止表单提交
+    }
+    // 如果昵称不为空，更新全局数据并跳转
+    app.globalData.userInfo.nickName = nickname
+    wx.switchTab({
+      url: '/pages/ucenter/index/index',
+    })
+  },
+  
+ 
+ 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
-    wx.setNavigationBarTitle({
-      title: '优惠券',
+  onLoad(options) {
+    wx.onThemeChange((result) => {
+      this.setData({
+        theme: result.theme
+      })
     })
-    this.loadData(0, options.mode);
+    this.setData({
+      avatarUrl: app.globalData.userInfo.avatarUrl,
+      nickname: app.globalData.userInfo.nickName
+    })
   },
+
+  // /**
+  //  * 生命周期函数--监听页面加载
+  //  */
+  // onLoad: function (options) {
+
+  //   wx.setNavigationBarTitle({
+  //     title: '优惠券',
+  //   })
+  //   this.loadData(0, options.mode);
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -37,7 +82,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      avatarUrl: app.globalData.userInfo.avatarUrl,
+      nickname: app.globalData.userInfo.nickName
+    })
   },
 
   /**

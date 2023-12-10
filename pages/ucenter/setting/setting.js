@@ -78,7 +78,15 @@ Page({
   },
   clearStorage: function () {
     wx.clearStorage();
-    Toast("清理成功");
+    app.resetGlobalData();
+    Dialog.alert({
+      title: '注意',
+      message: '清理成功'
+    }).then(() => {
+      wx.switchTab({
+        url: '/pages/ucenter/index/index',
+      })
+    });
   },
   about: function(){
     Dialog.alert({

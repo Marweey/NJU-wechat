@@ -32,5 +32,16 @@ App({
     planinfo:{
         // 计划数据
     }
-  }
+  },
+
+  // 方法：重置globalData
+  resetGlobalData: function() {
+    this.globalData = {
+      userInfo: {
+        nickName: "Hi，游客",
+        username: "点击去登录",
+        avatarUrl: "/assets/avatar.png"
+      },
+    };
+  },
 })
