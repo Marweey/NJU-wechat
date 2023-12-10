@@ -5,6 +5,7 @@
     "include": []
   },
   "setting": {
+    aaa
     "urlCheck": true,
     "es6": true,
     "postcss": true,
