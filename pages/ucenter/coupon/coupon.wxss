@@ -41,6 +41,7 @@
   height: 80px;
   border-radius: 50%;
   border: 2px solid #cccccc;
+  position: center;
 }
 
 .avatar-text {
