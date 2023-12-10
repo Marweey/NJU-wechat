@@ -57,7 +57,7 @@ Page({
       // 未登录信息
       this.setData({
         userInfo: app.globalData.userInfo,
-        isLogin: isLogin
+        isLogin: true
       });
     }
     // 动画

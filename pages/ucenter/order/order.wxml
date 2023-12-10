@@ -25,32 +25,32 @@
 <form catchsubmit="formSubmit" catchreset="formReset">
 <view class="sex">
   <text>性别</text>
-  <picker value="{{sex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">  
-     <view class="real">{{sexrange[sex]}}性</view> 
+  <picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">  
+     <view class="real">{{sex}}性</view> 
 </picker>
 </view>
 <view class="height">
   <text>身高</text>
-  <picker value="{{height}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
-     <view class="real">{{heightRange[height]}}厘米</view>
+  <picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
+     <view class="real">{{height}}厘米</view>
 </picker>  
 </view>
 <view class="weight">
   <text>体重</text>
-  <picker value="{{weight}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
-     <view class="real">{{weightRange[weight]}}公斤</view>
+  <picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
+     <view class="real">{{weight}}公斤</view>
 </picker>  
 </view>
 <view class="age">
   <text>年龄</text>
-  <picker value="{{age}}" range="{{agerange}}" bindchange="datePickerBindchange">  
-     <view class="real">{{agerange[age]}}岁</view> 
+  <picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">  
+     <view class="real">{{age}}岁</view> 
 </picker>
 </view>
 <view class="walk">
   <text>当前步数</text>
-  <picker value="{{walk}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
-     <view class="real">{{walkrange[walk]}}步</view> 
+  <picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
+     <view class="real">{{walk}}步</view> 
 </picker>
 </view>
 <button formType='reset' bind:tap="saveSuccess">保存</button>

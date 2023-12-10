@@ -23,45 +23,60 @@ Page({
     age:wx.getStorageSync('age'),
     walk:wx.getStorageSync('walk'),
     
+    sexIndex: wx.getStorageSync('sexIndex'),
+    heightIndex: wx.getStorageSync('heightIndex'),
+    weightIndex: wx.getStorageSync('weightIndex'),
+    ageIndex: wx.getStorageSync('ageIndex'),
+    walkIndex: wx.getStorageSync('walkIndex'),
     
 
   },
 
   sexPickerBindchange: function (e) {
-      this.data.sex = e.detail.value
+    // this.data.sex = e.detail.value
     this.setData({
-      sex: this.data.sex,
+      sex: this.data.sexrange[e.detail.value],
+      sexIndex: e.detail.value,
     })
-    wx.setStorageSync('sex', this.data.sex)
-    this.formReset
+    wx.setStorageSync('sex', this.data.sex),
+    wx.setStorageSync('sexIndex', this.data.sexIndex)
+    // this.formReset
   },
   heightPickerBindchange: function (e) {
-    this.data.height = e.detail.value
+    // this.data.height = e.detail.value
     this.setData({
-      height: parseInt(this.data.height)
+      height: this.data.heightRange[e.detail.value],
+      heightIndex: e.detail.value,
     })
-    wx.setStorageSync('height', this.data.height)
+    wx.setStorageSync('height', this.data.height),
+    wx.setStorageSync('heightIndex', this.data.heightIndex)
     // this.formReset
   },
   weightPickerBindchange: function (e) {
-    this.data.weight = e.detail.value
+    // this.data.weight = e.detail.value
     this.setData({
-      weight: parseInt(this.data.weight)
+      weight: this.data.weightRange[e.detail.value],
+      weightIndex: e.detail.value,
     })
-    wx.setStorageSync('weight', this.data.weight)
+    wx.setStorageSync('weight', this.data.weight),
+    wx.setStorageSync('weightIndex', this.data.weightIndex)
   },
   walkPickerBindchange: function (e) {
-    this.data.walk = e.detail.value
+    // this.data.walk = e.detail.value
     this.setData({
-      walk: parseInt(this.data.walk)
+      walk: this.data.walkrange[e.detail.value],
+      walkIndex: e.detail.value,
     })
-    wx.setStorageSync('walk', this.data.walk)
+    wx.setStorageSync('walk', this.data.walk),
+    wx.setStorageSync('walkIndex', this.data.walkIndex)
   },
   datePickerBindchange: function (e) {
     this.setData({
-      age: e.detail.value
+      age: this.data.agerange[e.detail.value],
+      ageIndex: e.detail.value,
     })
-    wx.setStorageSync('age', this.data.age)
+    wx.setStorageSync('age', this.data.age),
+    wx.setStorageSync('ageIndex', this.data.ageIndex)
   },
   formReset: function(e) {
     this.data.sex = wx.getStorageSync('sex'),
@@ -122,7 +137,13 @@ Page({
       height:wx.getStorageSync('height'),
       weight:wx.getStorageSync('weight'),
       age:wx.getStorageSync('age'),
-      walk:wx.getStorageSync('walk')
+      walk:wx.getStorageSync('walk'),
+
+      sexIndex: wx.getStorageSync('sexIndex'),
+      heightIndex: wx.getStorageSync('heightIndex'),
+      weightIndex: wx.getStorageSync('weightIndex'),
+      ageIndex: wx.getStorageSync('ageIndex'),
+      walkIndex: wx.getStorageSync('walkIndex'),
     })
   },
 
