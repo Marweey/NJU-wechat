@@ -43,12 +43,10 @@ Page({
   },
   heightPickerBindchange: function (e) {
     // this.data.height = e.detail.value
-    console.log(this.data.heightRange[e.detail.value])
     this.setData({
       height: this.data.heightRange[e.detail.value],
       heightIndex: e.detail.value,
     })
-    console.log(this.data.height)
 
     // this.formReset
   },

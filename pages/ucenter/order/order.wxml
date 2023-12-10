@@ -1,10 +1,10 @@
 <!--pages/ucenter/order/order.wxml-->
 <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
-  <van-tab title="全部"></van-tab>
-  <van-tab title="全部"></van-tab>
-  <van-tab title="全部"></van-tab>
-  <van-tab title="全部"></van-tab>
-  <van-tab title="全部"></van-tab>
+  <van-tab title="性别"></van-tab>
+  <van-tab title="身高"></van-tab>
+  <van-tab title="体重"></van-tab>
+  <van-tab title="年龄"></van-tab>
+  <van-tab title="步数"></van-tab>
 </van-tabs>
 
 <!-- 加载中 -->
@@ -23,36 +23,42 @@
 <!--编辑个人信息-->
 <view class="container">
 <form catchsubmit="formSubmit" catchreset="formReset">
+
+<picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">
 <view class="sex">
   <text>性别</text>
-  <picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">  
      <view class="real">{{sex}}性</view> 
-</picker>
 </view>
+</picker>
+
+<picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">
 <view class="height">
   <text>身高</text>
-  <picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">  
      <view class="real">{{height}}厘米</view>
-</picker>  
 </view>
+</picker>
+
+<picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">
 <view class="weight">
   <text>体重</text>
-  <picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">  
      <view class="real">{{weight}}公斤</view>
-</picker>  
 </view>
+</picker>
+
+<picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">
 <view class="age">
   <text>年龄</text>
-  <picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">  
      <view class="real">{{age}}岁</view> 
-</picker>
 </view>
+</picker>
+
+<picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">
 <view class="walk">
   <text>当前步数</text>
-  <picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">  
      <view class="real">{{walk}}步</view> 
-</picker>
 </view>
+</picker>
+
 <button bind:tap="saveSuccess">保存</button>
 </form>
 </view>
