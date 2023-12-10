@@ -79,7 +79,10 @@
 			  <view class="body_divide"></view>
         <view class="body_weight">
 				<text class="body_weight1">体重</text>
-				<text class="body_weight2">{{weight}} <text class="body_weight3">kg</text> </text>
+        <view style="display: flex;">
+				<text class="body_weight2">{{weight}} </text>
+        <text class="body_weight3">kg</text>
+        </view>
 				<image class="body_weightscale" src="/pages/sport/images/weightscale.png"></image>
 		    </view>
       </view>

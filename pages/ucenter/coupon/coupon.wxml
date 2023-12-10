@@ -1,13 +1,18 @@
 <!--pages/ucenter/coupon/coupon.wxml-->
-<view data-weui-theme="{{theme}}">
-  <button class="avatar-wrapper" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
-    <image class="avatar" src="{{avatarUrl}}"></image>
-  </button> 
-  <form catchsubmit="formSubmit">
-    <view class="row">
-      <view class="text1">昵称：</view>
-      <input type="nickname" class="weui-input" name="nickname" placeholder="请输入昵称" value="{{nickname}}"/>
+<view class="container">
+  <view class="title">微信昵称填写表单</view>
+  <view class="form">
+    <view class="avatar">
+      <button open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+        <image src="{{avatarUrl}}" class="avatar-image"></image>
+      </button>
+      <text class="avatar-text">点击选择头像</text>
     </view>
-    <button type="primary" style="margin-top: 40rpx;margin-bottom: 20rpx;" form-type="submit">提交</button>
-  </form>
+    <view class="nickname">
+      <input type="nickname" placeholder="请输入昵称" name="nickname" class="nickname-input" value="{{nickname}}"/>
+    </view>
+    <view class="submit">
+      <button form-type="submit" type="primary" class="submit-button">提交</button>
+    </view>
+  </view>
 </view>
