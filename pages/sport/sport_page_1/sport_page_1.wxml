@@ -33,7 +33,7 @@
           <canvas class="feet_progress_bg"   canvas-id="feet_canvasProgressbg">  </canvas>
           <canvas class="feet_progress_canvas"   canvas-id="feet_canvasProgress">  </canvas>
           <view class="feet_progress_text">
-              <image class="feet_progress_picture" src="/pages/sport/images/feet_picture.jpg" mode="aspectFill"></image>
+              <image class="feet_progress_picture" src="/pages/sport/images/feet_picture.png" mode="aspectFill"></image>
               <text class='feet_progress_info'> {{feet_count}}</text>
           </view>
        </view>   

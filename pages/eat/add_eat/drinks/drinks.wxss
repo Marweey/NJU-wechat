@@ -13,6 +13,8 @@
 .jiaBtn{
   width: 10rem;
   height: 5rem;
+  box-shadow: none;
+  border-width: 0;
   background-color: transparent;
 }
 .jiahao{

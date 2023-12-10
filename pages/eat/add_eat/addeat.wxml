@@ -3,7 +3,7 @@
   <view class='container1'>
   
     <view class='drink'>
-      <image src='/images/drink.jpg' mode='widthFix' bindtap='gotodrinks'></image>
+      <image src='/images/drink.png' mode='widthFix' bindtap='gotodrinks'></image>
       <button class='btn' bindtap='gotodrinks'>饮料</button>
     </view>
     <view class='lingshi'>

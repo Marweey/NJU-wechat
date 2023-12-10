@@ -1,6 +1,6 @@
 <!--pages/foodChoice/lingshi/lingshi.wxml-->
 <view class='container'>
-  <image class='image' src='/images/shupian.jpg' mode='widthFix'></image>
+  <image class='image' src='/images/shupian.png' mode='widthFix'></image>
   <view class='discription'>
     <text>薯片</text>
     <text class='danwei'>1.800千卡/克</text>

@@ -1,6 +1,6 @@
 <!--pages/foodChoice/shuiguo/shuiguo.wxml-->
 <view class='container'>
-  <image class='image' src='/images/xiangjiao.jpg' mode='widthFix'></image>
+  <image class='image' src='/images/xiangjiao.png' mode='widthFix'></image>
   <view class='discription'>
     <text>香蕉</text>
     <text class='danwei'>1.2千卡/克</text>
@@ -10,7 +10,7 @@
   </button>
 </view>
 <view class='container'>
-  <image class='image' src='/images/pingguo.jpg' mode='widthFix'></image>
+  <image class='image' src='/images/pingguo.png' mode='widthFix'></image>
   <view class='discription'>
     <text>苹果</text>
     <text class='danwei'>0.5千卡/克</text>
