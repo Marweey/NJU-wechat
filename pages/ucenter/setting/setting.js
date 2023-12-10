@@ -77,16 +77,23 @@ Page({
     })
   },
   clearStorage: function () {
-    wx.clearStorage();
-    app.resetGlobalData();
-    Dialog.alert({
+    Dialog.confirm({
       title: '注意',
-      message: '清理成功'
+      message: '该操作会退出登录并清除所有数据，确定执行吗？'
     }).then(() => {
-      wx.switchTab({
-        url: '/pages/ucenter/index/index',
+      wx.clearStorage();
+      app.resetGlobalData();
+      Dialog.alert({
+        title: '注意',
+        message: '清理成功'
+      }).then(() => {
+        wx.switchTab({
+          url: '/pages/ucenter/index/index',
+        })
       })
-    });
+    }).catch(() => {
+        // on cancel
+      });;
   },
   about: function(){
     Dialog.alert({
