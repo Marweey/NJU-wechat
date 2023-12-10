@@ -371,12 +371,14 @@ page{
   top: 110rpx;
   font-size: 50rpx;
   left: 160rpx;
+  display: flex;
 }
 .body_weight3{
-  position: absolute;
+  /* position: absolute; */
   top: 23rpx;
   left: 70rpx;
   font-size: 30rpx;
+  /* display: flex; */
 }
 
 .body_weightscale{
