@@ -40,10 +40,10 @@
           <view class='timeEvent'>{{foodCa4}}千卡</view>
         </view>
       </view>
-      
-      <view class="button" bindtap='ifclear'>
+      <button bind:tap="ifclear" type="warn">清除数据</button>
+      <!-- <view class="button" bindtap='ifclear'>
           <text>清除数据</text>
-      </view>
+      </view> -->
     </block>
       
   </view>
