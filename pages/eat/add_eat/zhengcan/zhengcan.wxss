@@ -15,6 +15,10 @@
     height: 5rem;
     background-color: transparent;
   }
+  .jiaBtn[plain]{
+    padding: 0;
+    border: none;
+  }
   .jiahao{
     width: 120rpx;
   }

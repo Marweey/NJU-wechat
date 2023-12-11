@@ -11,11 +11,15 @@
   width: 220rpx;
 }
 .jiaBtn{
-  width: 10rem;
+  width: 5rem;
   height: 5rem;
   box-shadow: none;
   border-width: 0;
   background-color: transparent;
+}
+.jiaBtn[plain]{
+  padding: 0;
+  border: none;
 }
 .jiahao{
   width: 120rpx;
