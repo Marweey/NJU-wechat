@@ -26,9 +26,25 @@ Page({
       })
     }
   },
+  
+  ifclear: function(){
+    wx.showModal({
+      title: '注意', //提示的标题
+      content: '该操作会清除所有数据，确定执行吗？', //提示的内容
+      success: (res) => {
+      if(res.confirm) {
+      this.clear();
+      console.log('用户点击了确定')
+      } else if (res.cancel) {
+      console.log('用户点击了取消')
+      }
+      }
+      });
+  },
+
   clear: function() {
     const keys = ['yinliao','lingshi','shuiguo','zhengcan'];
-
+      
     keys.forEach(key => {
       wx.removeStorageSync(key);
       success: (res) => {

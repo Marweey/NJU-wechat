@@ -42,7 +42,7 @@
 <view class='container'>
   <image class='image' src='/images/putao.png' mode='widthFix'></image>
   <view class='discription'>
-    <text style="width: 128rpx; height: 34rpx; display: block; box-sizing: border-box">葡萄</text>
+    <text>葡萄</text>
     <text class='danwei'>1.8千卡/克</text>
   </view>
   <button class="jiaBtn"bindtap='submit5' plain="true" style="position: relative; left: -18rpx; top: 0rpx"> 
@@ -53,7 +53,7 @@
   <image class='image' src='/images/caomei.png' mode='widthFix'></image>
   <view class='discription'>
     <text>草莓</text>
-    <text class='danwei'>0.30千卡/克</text>
+    <text class='danwei'>0.3千卡/克</text>
   </view>
   <button class="jiaBtn"bindtap='submit6' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
@@ -63,7 +63,7 @@
   <image class='image' src='/images/peach.png' mode='widthFix'></image>
   <view class='discription'>
     <text>桃子</text>
-    <text class='danwei'>0.38千卡/克</text>
+    <text class='danwei'>0.4千卡/克</text>
   </view>
   <button class="jiaBtn"bindtap='submit7' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
@@ -73,7 +73,7 @@
   <image class='image' src='/images/xigua.png' mode='widthFix'></image>
   <view class='discription'>
     <text>西瓜</text>
-    <text class='danwei'>0.25千卡/克</text>
+    <text class='danwei'>0.3千卡/克</text>
   </view>
   <button class="jiaBtn"bindtap='submit8' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>

@@ -41,7 +41,7 @@
         </view>
       </view>
       
-      <view class="button" bindtap='clear'>
+      <view class="button" bindtap='ifclear'>
           <text>清除数据</text>
       </view>
     </block>

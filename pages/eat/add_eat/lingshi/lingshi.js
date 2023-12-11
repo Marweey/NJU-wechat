@@ -23,6 +23,7 @@ Page({
       
     }
     flag = foodCa*parseInt(foodweight)+wx.getStorageSync('lingshi');
+    flag = flag.toFixed(1);
     wx.setStorageSync('lingshi', flag)
     this.setData({
       showModal: false
@@ -48,14 +49,14 @@ Page({
       showModal: true
     });
     foodName = '辣条';
-    foodCa = 18.27;
+    foodCa = 18;
   },
   submit4: function () {
     this.setData({
       showModal: true
     });
     foodName = '麻薯';
-    foodCa = 11.63;
+    foodCa = 11;
   },
   submit5: function () {
     this.setData({

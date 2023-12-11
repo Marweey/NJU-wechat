@@ -22,7 +22,8 @@ Page({
       wx.setStorageSync('shuiguo', 0);
       
     }
-    flag = foodCa*parseInt(foodweight)+wx.getStorageSync('shuiguo');   
+    flag = foodCa*parseInt(foodweight)+wx.getStorageSync('shuiguo');  
+    flag = flag.toFixed(1); 
      wx.setStorageSync('shuiguo', flag)
     this.setData({
       showModal: false
@@ -69,21 +70,21 @@ Page({
       showModal: true
     });
     foodName = '草莓';
-    foodCa = 0.30;
+    foodCa = 0.3;
   },
   submit7: function () {
     this.setData({
       showModal: true
     });
     foodName = '桃子';
-    foodCa = 0.38;
+    foodCa = 0.4;
   },
   submit8: function () {
     this.setData({
       showModal: true
     });
     foodName = '西瓜';
-    foodCa = 0.25;
+    foodCa = 0.3;
   },
   preventTouchMove: function () {
 

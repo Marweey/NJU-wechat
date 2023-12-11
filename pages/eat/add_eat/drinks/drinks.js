@@ -24,6 +24,7 @@ Page({
       
     }
     flag = foodCa*parseInt(foodweight)+wx.getStorageSync('yinliao');
+    flag = flag.toFixed(1);
     wx.setStorageSync('yinliao', flag);
     this.setData({
       showModal: false

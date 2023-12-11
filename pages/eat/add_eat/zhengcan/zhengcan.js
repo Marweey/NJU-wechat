@@ -23,6 +23,7 @@ Page({
       
     }
     flag = foodCa*parseInt(foodweight)+wx.getStorageSync('zhengcan');
+    flag = flag.toFixed(1);
     wx.setStorageSync('zhengcan', flag)
     this.setData({
       showModal: false
@@ -76,14 +77,14 @@ Page({
       showModal: true
     });
     foodName = '青菜';
-    foodCa = 0.17;
+    foodCa = 0.2;
   },
   submit8: function () {
     this.setData({
       showModal: true
     });
     foodName = '鱼';
-    foodCa = 1.08;
+    foodCa = 1.1;
   },
   preventTouchMove: function () {
 
