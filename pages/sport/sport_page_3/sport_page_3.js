@@ -1,6 +1,6 @@
 // index.ts
 // 获取应用实例
-
+import Dialog from '../../../lib/vant-weapp/dialog/dialog';
 Page({
   data: {
     exist_consume:0
@@ -47,6 +47,16 @@ Page({
     var that = this;
     var DATE = new Date();
     var date = DATE.getMonth()+'/'+DATE.getDate();
+    let checkNull = e.detail.value.consume
+    if (!checkNull.trim()) {
+      // 如果输入为空，弹出提示
+      wx.showToast({
+        title: '输入不能为空',
+        icon: 'none',
+        duration: 2000
+      })
+      return // 阻止表单提交
+    }
     let end 
       wx.getStorage({
         key: date+'sport_consume_storage',
@@ -59,6 +69,9 @@ Page({
             })
             that.setData({
               exist_consume:end
+            })
+            wx.showToast({
+              title: '已添加',
             })
 
         },fail(error){
