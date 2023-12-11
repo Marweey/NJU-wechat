@@ -40,8 +40,17 @@ Page({
     console.log(nickname)
     app.globalData.userInfo.nickName = nickname
     app.globalData.userInfo.avatarUrl = this.data.avatarUrl
-    wx.reLaunch({
-      url: '/pages/ucenter/index/index',
+    wx.showToast({
+      title: '保存成功',
+      icon:'success',
+      success: res=>{
+        setTimeout(()=>
+          {
+          wx.reLaunch({
+            url: '/pages/ucenter/index/index',
+          })
+       },1500)
+      }
     })
   },
   
