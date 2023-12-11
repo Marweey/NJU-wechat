@@ -1,27 +1,37 @@
-/* pages/foodChoice/lingshi/lingshi.wxss */
+
 .container{
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px; /* 右边距 */
+  margin-bottom: 10px; /* 容器之间的间距 */
+  /* display:flex;
+  flex-direction:row; */
 }
 .discription{
   display:flex;
   flex-direction:column;
 }
 .image{
-    width: 220rpx;
-  }
-  .jiaBtn{
-    width: 10rem;
-    height: 5rem;
-    background-color: transparent;
-  }
-  .jiaBtn[plain]{
-    padding: 0;
-    border: none;
-  }
-  .jiahao{
-    width: 120rpx;
-  }
-  .danwei{
-      font-size: 13px;
-  }
+  width: 220rpx;
+  /* float: right; */
+  margin-bottom: 10px;
+}
+.jiaBtn{
+  width: 5rem;
+  height: 5rem;
+  box-shadow: none;
+  border-width: 0;
+  background-color: transparent;
+}
+.jiaBtn[plain]{
+  padding: 0;
+  border: none;
+}
+.jiahao{
+  width: 120rpx;
+}
+.danwei{
+    font-size: 13px;
+}

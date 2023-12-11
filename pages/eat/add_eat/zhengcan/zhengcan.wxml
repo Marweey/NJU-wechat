@@ -5,7 +5,7 @@
     <text>牛排</text>
     <text class='danwei'>5.4千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit1' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
+  <button class="jiaBtn"bindtap='submit1' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -15,7 +15,7 @@
     <text>包子</text>
     <text class='danwei'>10千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit2' plain="true" style="position: relative; left: -11rpx; top: 30rpx"> 
+  <button class="jiaBtn"bindtap='submit2' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -25,7 +25,7 @@
     <text>鸡肉</text>
     <text class='danwei'>7千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit3' plain="true" style="position: relative; left: -11rpx; top: -2rpx"> 
+  <button class="jiaBtn"bindtap='submit3' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -35,17 +35,17 @@
     <text>面条</text>
     <text class='danwei'>11千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit4' plain="true" style="position: relative; left: -11rpx; top: 30rpx"> 
+  <button class="jiaBtn"bindtap='submit4' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
 <view class='container'>
-  <image class='image' src='/images/rice.png' mode='widthFix' style="width: 218rpx; height: 200rpx; display: block; box-sizing: border-box"></image>
+  <image class='image' src='/images/rice.png' mode='widthFix'></image>
   <view class='discription'>
     <text>米饭</text>
     <text class='danwei'>5.2千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit5' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
+  <button class="jiaBtn"bindtap='submit5' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -55,7 +55,7 @@
     <text>饺子</text>
     <text class='danwei'>4.2千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit6'  plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
+  <button class="jiaBtn"bindtap='submit6'  plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -65,7 +65,7 @@
     <text>青菜</text>
     <text class='danwei'>0.2千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit7' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
+  <button class="jiaBtn"bindtap='submit7' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -75,7 +75,7 @@
     <text>鱼</text>
     <text class='danwei'>1.1千卡/克</text>
   </view>
-  <button class="jiaBtn"bindtap='submit8' plain="true" style="position: relative; left: -11rpx; top: 0rpx"> 
+  <button class="jiaBtn"bindtap='submit8' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
