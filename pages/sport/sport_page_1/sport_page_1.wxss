@@ -374,9 +374,9 @@ page{
   display: flex;
 }
 .body_weight3{
-  /* position: absolute; */
+  position: absolute;
   top: 23rpx;
-  left: 70rpx;
+  left: 85rpx;
   font-size: 30rpx;
   /* display: flex; */
 }

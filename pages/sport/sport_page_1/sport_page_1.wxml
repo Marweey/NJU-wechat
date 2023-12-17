@@ -73,15 +73,18 @@
       <view class="body_detail">
 			  <view class="body_height">
 				<text class="body_height1">身高</text>
-				<text class="body_height2">{{height}} <text class="body_height3">cm</text> </text>
+				<text class="body_height2">{{height}}
+        <text class="body_height3">cm</text> 
+        </text>
 				<image class="body_ruler" src="/pages/sport/images/height.png"></image>
 			  </view>
 			  <view class="body_divide"></view>
         <view class="body_weight">
 				<text class="body_weight1">体重</text>
         <view style="display: flex;">
-				<text class="body_weight2">{{weight}} </text>
+				<text class="body_weight2">{{weight}} 
         <text class="body_weight3">kg</text>
+        </text>
         </view>
 				<image class="body_weightscale" src="/pages/sport/images/weightscale.png"></image>
 		    </view>

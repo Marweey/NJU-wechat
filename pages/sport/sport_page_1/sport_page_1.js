@@ -38,8 +38,8 @@ Page({
     //数据加载
     var DATE = new Date();
     // var time = DATE.getMinutes()<10? '0'+ DATE.getMinutes():DATE.getMinutes()+':'+DATE.getSeconds()<10? '0'+DATE.getSeconds():DATE.getSeconds();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
-    var year = DATE.getFullYear()+'/'+DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
+    var year = DATE.getFullYear()+'/'+(DATE.getMonth()+1)+'/'+DATE.getDate();
     var time = DATE.getHours()+':'+ DATE.getMinutes();
     // var  time = "08:00";
     // var date = "06/07";
@@ -89,8 +89,8 @@ Page({
   onShow(){
     var DATE = new Date();
     // var time = DATE.getMinutes()<10? '0'+ DATE.getMinutes():DATE.getMinutes()+':'+DATE.getSeconds()<10? '0'+DATE.getSeconds():DATE.getSeconds();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
-    var year = DATE.getFullYear()+'/'+DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
+    var year = DATE.getFullYear()+'/'+(DATE.getMonth()+1)+'/'+DATE.getDate();
     var time = DATE.getHours()+':'+ DATE.getMinutes();
     // var  time = "08:00";
     // var date = "06/07";
