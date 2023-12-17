@@ -11,6 +11,7 @@ Page({
     showLog: false, // 是否展示统计页面
     showClock: false,
     time: '5', // 当前选中的将专注时间
+    inputValue: '5',
     timer: null,
     rate: '',
     // openid: '',
@@ -57,6 +58,21 @@ Page({
     eTime: 290000,
   },
 
+  inputChange: function(event) {
+    let value = event.detail.value;
+    // 判断输入值是否在范围内
+    if (value < 1) {
+      value = 1; // 小于1时，重置为1
+    } else if (value > 60) {
+      value = 60; // 大于60时，重置为60
+      console.log("chongzhi");
+    }
+    this.setData({
+      time: value,
+      inputValue: value
+    });
+  },
+
   // 监听页面加载
   onLoad: function () {
     wx.setNavigationBarTitle({
@@ -88,7 +104,8 @@ Page({
   // 事件监听：滑动条改变时
   sliderChange: function (e) {
     this.setData({
-      time: e.detail.value
+      time: e.detail.value,
+      inputValue: e.detail.value
     })
   },
   

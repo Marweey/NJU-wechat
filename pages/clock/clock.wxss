@@ -1,8 +1,25 @@
 /* pages/clock/clock.wxss */
+.container{
+  display: flex; /* 使用flex布局 */
+  align-items: center; /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+}
 .slider {
+  flex: auto;
   width: 650rpx;
   margin: 40rpx auto;
   padding-top: 15rpx;
+}
+.input_container {
+  flex: auto; /* 输入框占据剩余空间 */
+  width: 60rpx;
+  margin-right: 40rpx;
+  padding-top: 15rpx;
+}
+.input_box {
+  width: 80rpx;
+  border: 1rpx solid #ccc;
+  border-radius: 5rpx ;
 }
 .task_text {
   height: 200rpx;

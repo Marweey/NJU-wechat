@@ -2,9 +2,16 @@
 <!--计时时钟，在showClock为false时显示-->
 <view hidden="{{showClock || showLog}}">
   <!--滚动条，用于选择专注时间，从1分钟到60分钟-->
-  <view class="slider">
-    <slider min="1" max="60" show-value="true" activeColor="#E7624F" backgroundColor="#666666" value="{{time}}" bindchange="sliderChange">
-    </slider>
+  <view class="container">
+    <view class="slider">
+      <slider min="1" max="60"  activeColor="#E7624F" backgroundColor="#666666" value="{{time}}" bindchange="sliderChange">
+      </slider>
+    </view>
+
+    <!-- 添加输入框 -->
+    <view class="input_container">
+      <input class="input_box" type="number" value="{{inputValue}}" bindinput="inputChange"/>
+    </view>
   </view>
 
   <view class="task_text">
