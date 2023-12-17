@@ -1,11 +1,13 @@
 <view>
+<view class="text-center">
   <text>已消耗热量</text>
-  <text >   {{exist_consume}}</text>
+  <text>   {{exist_consume}}</text>
   <text>     kcal</text>
+</view>
 	<!-- <text class="a"> 添加热量消耗(kcal)</text> -->
   <form bindsubmit="_bindconfirm">
     <input class="consume_input" auto-focus type="number"  name="consume" placeholder="请输入新增消耗量"    />
-    <button class="wehx-foot-btn" style="width: 160rpx; font-size: 25rpx; height: 70rpx;" formType="submit">确定</button>
+    <button class="wehx-foot-btn" style="width: 180rpx; font-size: 30rpx; height: 75rpx;" formType="submit">确定</button>
   </form>
   <text class="tip">
   各运动参考热量
