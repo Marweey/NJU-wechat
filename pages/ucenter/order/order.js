@@ -101,6 +101,8 @@ Page({
     wx.setStorageSync('age', this.data.age),
     wx.setStorageSync('ageIndex', this.data.ageIndex),
 
+    this.saveDataWithDate(this.data.walk);
+
     Dialog.alert({
       message: '保存成功'
     }).then(() => {
@@ -110,6 +112,29 @@ Page({
       })
     });
   },
+
+// 获取当前日期
+getCurrentDate: function (e) {
+  const date = new Date();
+  // const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  
+  // 格式化日期为 YYYY-MM-DD
+  const formattedDate = `${month < 10 ? '0' + month : month}/${day < 10 ? '0' + day : day}`;
+  // console.log(formattedDate)
+  return formattedDate;
+},
+
+// 存储数据
+saveDataWithDate: function (data) {
+  // 获取当前日期
+  const currentDate = this.getCurrentDate();
+
+  // 将更新后的数据存储到本地
+  wx.setStorageSync(currentDate, wx.getStorageSync('walk'));
+},
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -126,7 +151,7 @@ Page({
       })
     }
     // 模拟加载数据
-    this.loadData(type)
+    // this.loadData(type)
   },
 
   /**
