@@ -21,6 +21,7 @@
 .jiaBtn{
   width: 5rem;
   height: 5rem;
+  margin: 10px;
   box-shadow: none;
   border-width: 0;
   background-color: transparent;
