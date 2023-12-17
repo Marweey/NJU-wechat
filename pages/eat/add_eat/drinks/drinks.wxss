@@ -6,8 +6,6 @@
   align-items: center;
   padding-right: 10px; /* 右边距 */
   margin-bottom: 10px; /* 容器之间的间距 */
-  /* display:flex;
-  flex-direction:row; */
 }
 .discription{
   display:flex;
@@ -15,12 +13,12 @@
 }
 .image{
   width: 220rpx;
-  /* float: right; */
   margin-bottom: 10px;
 }
 .jiaBtn{
   width: 5rem;
   height: 5rem;
+  margin: 10px;
   box-shadow: none;
   border-width: 0;
   background-color: transparent;

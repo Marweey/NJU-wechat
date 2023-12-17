@@ -6,7 +6,7 @@
     <text>健康果汁</text>
     <text class='danwei'>0.2千卡/毫升</text>
   </view>
-  <button class="jiaBtn" bindtap='submit1' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn" bindtap='submit1' plain="true" > 
     <image  class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -16,7 +16,7 @@
     <text>肥宅可乐</text>
     <text class='danwei'>1.8千卡/毫升</text>
   </view>
-  <button class="jiaBtn" bindtap='submit2' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn" bindtap='submit2' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -27,7 +27,7 @@
     <text>咖啡</text>
     <text class='danwei'>2.0千卡/毫升</text>
   </view>
-  <button class="jiaBtn" bindtap='submit3' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn" bindtap='submit3' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -37,7 +37,7 @@
     <text>牛奶</text>
     <text class='danwei'>0.7千卡/毫升</text>
   </view>
-  <button class="jiaBtn" bindtap='submit4' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn" bindtap='submit4' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -47,7 +47,7 @@
     <text>奶茶</text>
     <text class='danwei'>0.4千卡/毫升</text>
   </view>
-  <button class="jiaBtn"bindtap='submit6' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn"bindtap='submit6' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -57,7 +57,7 @@
     <text>酒</text>
     <text class='danwei'>0.35千卡/毫升</text>
   </view>
-  <button class="jiaBtn"bindtap='submit7' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn"bindtap='submit7' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -67,7 +67,7 @@
     <text>豆浆</text>
     <text class='danwei'>0.15千卡/毫升</text>
   </view>
-  <button class="jiaBtn"bindtap='submit8' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn"bindtap='submit8' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
@@ -77,7 +77,7 @@
     <text>酸奶</text>
     <text class='danwei'>3.0千卡/毫升</text>
   </view>
-  <button class="jiaBtn" bindtap='submit5' plain="true" style="position: relative; left: -6rpx; top: 30rpx"> 
+  <button class="jiaBtn" bindtap='submit5' plain="true" > 
     <image class='jiahao' src='/images/jiahao.png' mode='widthFix'></image>
   </button>
 </view>
