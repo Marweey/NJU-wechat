@@ -1,7 +1,7 @@
 let Charts = require('./../../../wxcharts/wxcharts.js');
 Page({
   data:{
-
+      walkAddUp:0,
   },
   // onReady: function () {
   //   this.runLineCanvas();
@@ -54,7 +54,11 @@ Page({
   
     const last7Days = generateLast7Days();
     const data = last7Days.map(date => getDataFromStorage(date));
-    
+    let max_data = Math.max(...data)
+    let walkAddUp = data.reduce((acc, val) => acc + parseInt(val, 10), 0);
+    this.setData({
+      walkAddUp: walkAddUp
+    });
     // 更新图表配置
     new Charts({
       canvasId: 'canvas1',
@@ -69,7 +73,7 @@ Page({
           return val;
         },
         forceY: [0],
-          max:10000,
+          max:max_data==0?30000:max_data,
           min:0
       },
       width: windowWidth + 10,
