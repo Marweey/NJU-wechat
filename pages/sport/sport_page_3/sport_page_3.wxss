@@ -24,7 +24,13 @@
 }
 .wehx-foot-btn{
   position: absolute;
-  top: 80rpx;
-  right: 20rpx;
-  background-color: rgb(243, 239, 239);
+  top: 90rpx;
+  right: 30rpx;
+  background-color: green;
+  color: white;
 }
+.text-center {
+  position: relative;
+  text-align: center;
+  top: 20rpx;
+ }
