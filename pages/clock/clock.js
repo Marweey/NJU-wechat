@@ -61,9 +61,7 @@ Page({
   inputChange: function(event) {
     let value = event.detail.value;
     // 判断输入值是否在范围内
-    if (value < 1) {
-      value = 1; // 小于1时，重置为1
-    } else if (value > 60) {
+     if (value > 60) {
       value = 60; // 大于60时，重置为60
       console.log("chongzhi");
     }
