@@ -1,36 +1,44 @@
-.a{
-  position: relative;
-  top: rpx;
-  border-width: 10rpx;
-  border-radius: 10rpx;
-  border-bottom:10rpx;
+/* Updated styles for Flexbox */
+.text-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20rpx;
+  justify-content: center;
 }
-.consume_input{
-  position: relative;
-  top: 40rpx;
+.text-center text{
+  font-size: large;
+  padding-left: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: row; /* Set the direction to row for the form elements */
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.consume_input {
   width: 70%;
-  left: 8rpx;
+  margin-left: 8rpx;
   height: 70rpx;
   background-color: rgb(255, 255, 255);
   border: 3rpx solid black;
   font-weight: lighter;
 }
-.tip{
-  position: relative;
-  top:30rpx;
-  left: 20rpx;
+
+.wehx-foot-btn {
+  width: 180rpx;
+  font-size: 30rpx;
+  height: 75rpx;
+  background-color: green;
+  color: white;
+  margin-left: 10rpx; /* Add some spacing between buttons */
+}
+
+.tip {
+  margin-top: 30rpx;
+  margin-left: 20rpx;
   font-size: 22rpx;
   font-weight: lighter;
 }
-.wehx-foot-btn{
-  position: absolute;
-  top: 90rpx;
-  right: 30rpx;
-  background-color: green;
-  color: white;
-}
-.text-center {
-  position: relative;
-  text-align: center;
-  top: 20rpx;
- }
