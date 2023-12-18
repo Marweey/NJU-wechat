@@ -30,7 +30,7 @@
      <view class="real">{{agerange[age]}}岁</view> 
 </picker>
 </view> -->
-<button bind:tap="saveSuccess">保存</button>
+<button bind:tap="saveSuccess" type="primary">保存</button>
 </form>
 </view>
 

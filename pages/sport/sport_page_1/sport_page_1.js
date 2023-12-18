@@ -38,8 +38,8 @@ Page({
     //数据加载
     var DATE = new Date();
     // var time = DATE.getMinutes()<10? '0'+ DATE.getMinutes():DATE.getMinutes()+':'+DATE.getSeconds()<10? '0'+DATE.getSeconds():DATE.getSeconds();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
-    var year = DATE.getFullYear()+'/'+DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
+    var year = DATE.getFullYear()+'/'+(DATE.getMonth()+1)+'/'+DATE.getDate();
     var time = DATE.getHours()+':'+ DATE.getMinutes();
     // var  time = "08:00";
     // var date = "06/07";
@@ -53,7 +53,7 @@ Page({
       sport_intent: wx.getStorageSync('calore'),
     })
     var kilo = parseFloat((this.data.feet_count*0.00065).toFixed(1));
-    var consume = kilo*45;
+    var consume = (kilo*45).toFixed(2);
     var fat = parseFloat ((this.data.sport_consume*0.0001111).toFixed(2));
      var percent2 = parseInt(((this.data.sport_consume/this.data.sport_intent)*100).toFixed());
      var percent1 = parseFloat((this.data.feet_count/this.data.intent_feet).toFixed(2))
@@ -89,8 +89,8 @@ Page({
   onShow(){
     var DATE = new Date();
     // var time = DATE.getMinutes()<10? '0'+ DATE.getMinutes():DATE.getMinutes()+':'+DATE.getSeconds()<10? '0'+DATE.getSeconds():DATE.getSeconds();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
-    var year = DATE.getFullYear()+'/'+DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
+    var year = DATE.getFullYear()+'/'+(DATE.getMonth()+1)+'/'+DATE.getDate();
     var time = DATE.getHours()+':'+ DATE.getMinutes();
     // var  time = "08:00";
     // var date = "06/07";
@@ -104,7 +104,7 @@ Page({
       sport_intent: wx.getStorageSync('calore'),
     })
     var kilo = parseFloat((this.data.feet_count*0.00065).toFixed(1));
-    var consume = kilo*45;
+    var consume = (kilo*45).toFixed(2);
     var fat = parseFloat ((this.data.sport_consume*0.0001111).toFixed(2));
      var percent2 = parseInt(((this.data.sport_consume/this.data.sport_intent)*100).toFixed());
      var percent1 = parseFloat((this.data.feet_count/this.data.intent_feet).toFixed(2))
