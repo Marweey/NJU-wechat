@@ -26,3 +26,24 @@
   top: 80rpx;
   font-size: 40rpx;
 }
+.text-box {
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: center; /* 在主轴上居中（水平方向） */
+  align-items: center; /* 在交叉轴上居中（垂直方向） */
+  background-color: #3498db; /* 背景颜色，可以根据需求调整 */
+  padding: 10px; /* 内边距，可以根据需求调整 */
+  border-radius: 8px; /* 圆角，可以根据需求调整 */
+}
+
+.text-box text {
+  font-size: 16px;
+  color: #fff;
+}
+
+.text-box .highlight {
+  font-size: 18px;
+  color: #ffa500;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
