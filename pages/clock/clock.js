@@ -186,7 +186,7 @@ Page({
         var lineWidth = 9 / _this.data.rate;
         var ctx = wx.createCanvasContext('progress_active');
         ctx.setLineWidth(lineWidth);
-        ctx.setStrokeStyle('#ffffff');
+        ctx.setStrokeStyle('#FF6347');
         ctx.setLineCap('round');
         ctx.beginPath();
         ctx.arc(400 / _this.data.rate / 2, 400 / _this.data.rate / 2, 400 / _this.data.rate / 2 - 2 * lineWidth, 1.5 * Math.PI, angle * Math.PI, false);
