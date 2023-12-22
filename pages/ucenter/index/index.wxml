@@ -7,7 +7,6 @@
       <view class="box_index">{{index+1}}</view>
       <view class="flex-row">
         {{item}}
-        <view class="box_circle flex-row j_c" wx:if="{{index==0}}"></view>
       </view>
     </view>
     <view class="show_btn" hidden="{{isShow}}" catchtap="handleRecord">记住了，我去试试</view>
