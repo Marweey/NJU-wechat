@@ -56,6 +56,7 @@ Page({
     s: '',
     mTime: 300000,
     eTime: 290000,
+    selectedCate: -1,
   },
 
   inputChange: function(event) {
@@ -109,9 +110,10 @@ Page({
   
   // 事件监听：选中的待专注事项改变时
   clickCate: function (e) {
+    const selectedIndex = e.currentTarget.dataset.index;
     this.setData({
-      cateActive: e.currentTarget.dataset.index
-    })
+      selectedCate: selectedIndex
+    });
   },
 
   // start，当用户点击“开始专注”时候
@@ -148,10 +150,11 @@ Page({
 
   // 初始化画布
   drawBg: function () {
-    var lineWidth = 6 / this.data.rate;
+    var lineWidth = 8 / this.data.rate;
     var ctx = wx.createCanvasContext('progress_bg');
     ctx.setLineWidth(lineWidth);
-    ctx.setStrokeStyle('#000000');
+    // ctx.setStrokeStyle('#000000');
+    ctx.setStrokeStyle('rgba(255, 255, 255, 0.6)'); // 设置为半透明的淡白色
     ctx.setLineCap('round');
     ctx.beginPath();
     ctx.arc(400 / this.data.rate / 2, 400 / this.data.rate / 2, 400 / this.data.rate / 2 - 2 * lineWidth, 0, 2 * Math.PI, false);
@@ -180,10 +183,10 @@ Page({
             timeStr: timeStr4 + ':' + timeStr3
           })
         }
-        var lineWidth = 6 / _this.data.rate;
+        var lineWidth = 9 / _this.data.rate;
         var ctx = wx.createCanvasContext('progress_active');
         ctx.setLineWidth(lineWidth);
-        ctx.setStrokeStyle('#ffffff');
+        ctx.setStrokeStyle('#FF6347');
         ctx.setLineCap('round');
         ctx.beginPath();
         ctx.arc(400 / _this.data.rate / 2, 400 / _this.data.rate / 2, 400 / _this.data.rate / 2 - 2 * lineWidth, 1.5 * Math.PI, angle * Math.PI, false);
@@ -213,7 +216,7 @@ Page({
       timer: timer
     })
   },
-
+  
   // 事件监听：用户点击“暂停”时
   pause: function () {
     clearInterval(this.data.timer);
