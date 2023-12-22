@@ -56,6 +56,7 @@ Page({
     s: '',
     mTime: 300000,
     eTime: 290000,
+    selectedCate: -1,
   },
 
   inputChange: function(event) {
@@ -109,9 +110,10 @@ Page({
   
   // 事件监听：选中的待专注事项改变时
   clickCate: function (e) {
+    const selectedIndex = e.currentTarget.dataset.index;
     this.setData({
-      cateActive: e.currentTarget.dataset.index
-    })
+      selectedCate: selectedIndex
+    });
   },
 
   // start，当用户点击“开始专注”时候

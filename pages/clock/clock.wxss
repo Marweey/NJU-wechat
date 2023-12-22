@@ -48,6 +48,7 @@
   height: 130rpx;
   text-align: center;
   margin-bottom: 50rpx;
+  position: relative; /* 添加这一行 */
 }
 .task_cate .cate_item .cate_icon {
   height: 70rpx;
@@ -61,9 +62,29 @@
   line-height: 60rpx;
   font-size: 30rpx;
 }
-.task_cate .cate_item .cate_text_active {
-  color: #E7624F;
+.task_cate .cate_item.selected .cate_text {
+  color: #ffffff; /* 选中时的颜色 */
 }
+/* Invert icon color for selected category */
+.task_cate .cate_item.selected .cate_icon image {
+  filter: invert(1);
+}
+.task_cate .cate_item.selected {
+  background-color: #E7624F;
+}
+.task_cate .cate_item.selected::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%; /* 修改宽度 */
+  height: 120%; /* 修改高度 */
+  background-color: #E7624F;
+  border-radius: 10rpx; /* 圆角半径，根据需求调整 */
+  z-index: -1;
+}
+
 .start {
   width: 280rpx;
   height: 90rpx;

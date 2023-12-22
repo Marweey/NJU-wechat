@@ -20,7 +20,7 @@
   </view>
 
   <view class="task_cate">
-    <view wx:for="{{cateArr}}" class="cate_item" wx:key="cate" bindtap="clickCate" data-index="{{index}}">
+    <view wx:for="{{cateArr}}" class="cate_item {{index == selectedCate ? 'selected' : ''}}" wx:key="cate" bindtap="clickCate" data-index="{{index}}">
       <view class="cate_icon">
         <image src="./images/{{item.icon}}.png"></image>
       </view>
