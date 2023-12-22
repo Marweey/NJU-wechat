@@ -107,7 +107,18 @@
 }
 .clock {
   overflow: hidden;
-  background: #E7624F;
+  /* 如果希望铺满整个容器，可以添加下面的样式 */
+  width: 100%;
+  height: 100%;
+}
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 根据需要调整背景尺寸适应 */
+  position: absolute; /* 设置绝对定位，使 z-index 生效 */
+  top: 0;
+  left: 0;
+  z-index: -1; /* 将背景图片放在底层，避免遮挡其他内容 */
 }
 .progress {
   width: 400rpx;
@@ -126,7 +137,7 @@
   width: 160rpx;
   height: 60rpx;
   line-height: 60rpx;
-  font-size: 35rpx;
+  font-size: 60rpx;
   color: #ffffff;
   text-align: center;
   position: absolute;

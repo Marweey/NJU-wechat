@@ -41,6 +41,7 @@
 
 <!--时钟-->
 <view class="clock" hidden="{{!showClock}}" style="height:{{clockHeight}}rpx">
+  <image class="background-image" src="./images/clock_bg.png"></image>
   <view class="progress">
     <canvas canvas-id="progress_bg" class="progress_bg">
     </canvas>
