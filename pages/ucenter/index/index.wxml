@@ -1,6 +1,23 @@
 <!--pages/ucenter/index/index.wxml-->
-<view class="ucenter">
-  <view class="profile-info" bindtap="toLogin">
+<view hidden="{{isShow}}">
+  <!-- mask背景遮罩，样式定义在app.wxss -->
+  <root-portal><view class="mask" hidden="{{isShow}}"></view>
+  <view class="show_box" hidden="{{isShow}}">
+    <view class="show_item flex" hidden="{{isShow}}" style="--d:{{index+1}}" wx:for="{{flagList}}" wx:key="flagList">
+      <view class="box_index">{{index+1}}</view>
+      <view class="flex-row">
+        {{item}}
+        <view class="box_circle flex-row j_c" wx:if="{{index==0}}"></view>
+      </view>
+    </view>
+    <view class="show_btn" hidden="{{isShow}}" catchtap="handleRecord">记住了，我去试试</view>
+  </view>
+</root-portal>
+</view>
+
+<view class="ucenter" >
+  <view class="mask-overlay"></view>
+  <view class="profile-info"  bindtap="toLogin" >
     <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
     <view class="info">
       <text class="name">{{userInfo.nickName}}</text>
@@ -27,7 +44,7 @@
     </view>
     <view class="order-icon">
       
-      <view class="icon-wrap" id="0" bindtap="toOrder">
+      <view class="icon-wrap" id="0" bindtap="toOrder" >
         <i-badge count="{{order.comment}}">
           <image class="icon" src="/assets/sex.png"></image>
         </i-badge>
@@ -58,34 +75,6 @@
     </view>
   </view>
 
-  <!-- <view class="order-wrap">
-    <view class="order-header">
-      <text class="txt">我的统计</text>
-    </view>
-    <view class="order-icon">
-      <view class="icon-wrap" bindtap="toCoupon">
-        <text class="num">{{wallet.coupon}}</text>
-        <text class="txt">步数</text>
-      </view>
-      <view class="icon-wrap">
-        <text class="num">{{wallet.point}}</text>
-        <text class="txt">热量</text>
-      </view>
-      <view class="icon-wrap" bindtap="toRed">
-        <text class="num">{{wallet.red}}</text>
-        <text class="txt">专注时间</text>
-      </view>
-      <view class="icon-wrap">
-        <text class="num">{{wallet.allowance}}</text>
-        <text class="txt">津贴</text>
-      </view>
-      <view class="icon-wrap">
-        <text class="num">{{wallet.gift}}</text>
-        <text class="txt">礼品卡</text>
-      </view>
-    </view>
-  </view> -->
-
   <view class="service-wrap">
     <view class="order-header">
       <text class="txt">我的计划</text>
@@ -103,18 +92,8 @@
         <image class="icon" src="/assets/time.png"></image>
         <text class="txt">专注时间</text>
       </view>
-      <!-- <view class="icon-wrap" bindtap="toAddress">
-        <image class="icon" src="/assets/address.png"></image>
-        <text class="txt">地址管理</text>
-      </view> -->
     </view>
     <view class="order-icon">
-      <!-- <view class="icon-wrap">
-        <button open-type="contact" hover-class="none" class="wxbtn">
-          <image class="icon wx" src="/assets/service.png"></image>
-          <text class="txt">联系客服</text>
-        </button>
-      </view> -->
       <view class="icon-wrap">
       <button open-type="contact" hover-class="none" class="wxbtn">
         <image class="icon" src="/assets/help.png"></image>

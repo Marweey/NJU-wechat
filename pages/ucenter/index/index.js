@@ -21,7 +21,9 @@ Page({
       red: 3,
       allowance: 0,
       gift: 0
-    }
+    },
+    isShow: wx.getStorageSync('mask_ucenter') || false,//是否隐藏引导对话，默认不隐藏
+    flagList: ['点击头像登录', '点击"我的信息栏"设置信息', '点击"我的计划"栏设置计划','做完这些后，才可以正常使用后面的功能哟😊']
   },
 
   /**
@@ -30,7 +32,10 @@ Page({
   onLoad: function (options) {
     wx.setNavigationBarTitle({
       title: '个人中心'
-    })
+    });
+    if(!this.data.isShow){
+      wx.hideTabBar()
+    }
 
   },
 
@@ -184,4 +189,16 @@ Page({
     })
     }
   },
+
+  handleRecord: function () {
+    var that = this;
+    wx.setStorageSync('mask_ucenter', true);
+    setTimeout(function(){
+      that.setData({
+        isShow : true
+      })
+      wx.showTabBar();
+    },1000);
+  },
+  
 })
