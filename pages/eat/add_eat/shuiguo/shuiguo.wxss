@@ -4,10 +4,9 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 10px; /* 右边距 */
-  margin-bottom: 10px; /* 容器之间的间距 */
-  /* display:flex;
-  flex-direction:row; */
+  padding-right: 10rpx; /* 右边距 */
+  margin-bottom: 0rpx; /* 容器之间的间距 */
+  border: 1rpx solid;
 }
 .discription{
   display:flex;
@@ -15,13 +14,13 @@
 }
 .image{
   width: 220rpx;
-  /* float: right; */
+  margin-left: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 .jiaBtn{
-  width: 5rem;
-  height: 5rem;
-  margin: 10px;
+  margin-top: 10px;
+  margin-right: 10rpx;
   box-shadow: none;
   border-width: 0;
   background-color: transparent;
@@ -31,12 +30,16 @@
   border: none;
 }
 .jiahao{
+  height: 120rpx;
   width: 120rpx;
+  margin-bottom: auto;
 }
 .danwei{
-  font-size: 13px;
-  font-family: "华文行楷";
+    border-bottom:1rpx solid ;
+    font-size: 13px;
+    /* font-family: "隶书"; */
+    color: rgb(255, 0, 0);
 }
 .foodname{
-  font-family: "华文行楷";
+    font-family: "楷体";
 }
