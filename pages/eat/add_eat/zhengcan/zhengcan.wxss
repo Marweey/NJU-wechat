@@ -34,5 +34,9 @@
   width: 120rpx;
 }
 .danwei{
-    font-size: 13px;
+  font-size: 13px;
+  font-family: "华文行楷";
+}
+.foodname{
+  font-family: "华文行楷";
 }
