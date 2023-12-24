@@ -3,7 +3,7 @@
 
   <image class='image' src='/images/drink.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>健康果汁</text>
+    <text class="foodname">健康果汁</text>
     <text class='danwei'>0.2千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit1' plain="true" > 
@@ -13,7 +13,7 @@
 <view class='container'>
   <image class='image' src='/images/coke.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>肥宅可乐</text>
+    <text class="foodname">肥宅可乐</text>
     <text class='danwei'>1.8千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit2' plain="true" > 
@@ -24,7 +24,7 @@
 <view class='container'>
   <image class='image' src='/images/kafei.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>咖啡</text>
+    <text class="foodname">咖啡</text>
     <text class='danwei'>2.0千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit3' plain="true" > 
@@ -34,7 +34,7 @@
 <view class='container'>
   <image class='image' src='/images/milk.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>牛奶</text>
+    <text class="foodname">牛奶</text>
     <text class='danwei'>0.7千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit4' plain="true" > 
@@ -44,7 +44,7 @@
 <view class='container'>
   <image class='image' src='/images/naicha.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>奶茶</text>
+    <text class="foodname">奶茶</text>
     <text class='danwei'>0.4千卡/毫升</text>
   </view>
   <button class="jiaBtn"bindtap='submit6' plain="true" > 
@@ -54,7 +54,7 @@
 <view class='container'>
   <image class='image' src='/images/jiu.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>酒</text>
+    <text class="foodname">酒</text>
     <text class='danwei'>0.35千卡/毫升</text>
   </view>
   <button class="jiaBtn"bindtap='submit7' plain="true" > 
@@ -64,7 +64,7 @@
 <view class='container'>
   <image class='image' src='/images/doujiang.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>豆浆</text>
+    <text class="foodname">豆浆</text>
     <text class='danwei'>0.15千卡/毫升</text>
   </view>
   <button class="jiaBtn"bindtap='submit8' plain="true" > 
@@ -74,7 +74,7 @@
 <view class='container'>
   <image class='image' src='/images/suannai.png' mode='widthFix'></image>
   <view class='discription'>
-    <text>酸奶</text>
+    <text class="foodname">酸奶</text>
     <text class='danwei'>3.0千卡/毫升</text>
   </view>
   <button class="jiaBtn" bindtap='submit5' plain="true" > 

@@ -100,8 +100,16 @@ Page({
     })
   },
 
-  // 事件监听：滑动条改变时
+  // 事件监听：滑动条改变后
   sliderChange: function (e) {
+    this.setData({
+      time: e.detail.value,
+      inputValue: e.detail.value
+    })
+  },
+
+  // 事件监听：滑动条改变时
+  sliderChangeing: function (e) {
     this.setData({
       time: e.detail.value,
       inputValue: e.detail.value
