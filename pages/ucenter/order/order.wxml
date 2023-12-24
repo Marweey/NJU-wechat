@@ -1,66 +1,80 @@
 <!--pages/ucenter/order/order.wxml-->
-<van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
-  <van-tab title="性别"></van-tab>
-  <van-tab title="身高"></van-tab>
-  <van-tab title="体重"></van-tab>
-  <van-tab title="年龄"></van-tab>
-  <van-tab title="步数"></van-tab>
-</van-tabs>
+<view class="box">
+  <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
+    <van-tab title="性别"></van-tab>
+    <van-tab title="身高"></van-tab>
+    <van-tab title="体重"></van-tab>
+    <van-tab title="年龄"></van-tab>
+    <van-tab title="步数"></van-tab>
+  </van-tabs>
 
-<!-- 加载中 -->
-<view wx:if="{{loading}}" class="loading-center">
-  <van-loading type="spinner" />
+
+
+
+  <view class="container1">
+    <view class="card">
+      <view class="title">设置性别</view>
+      <view class="gender">
+          <input type="radio" id="male" name="gender" data-gender="male" value="male" checked="{{sex === 'male'}}">
+          </input>
+          <label for="male" data-gender="male" bind:tap="onLabelClick" class="{{sex === 'male' ? 'selected gender-input' : 'gender-input'}}">
+            <image src="../../../assets/male.png" class="gender-image"></image>
+          </label>
+          <input type="radio" id="female" name="gender" value="female" checked="{{gender === 'female'}}"></input>
+          <label for="female" data-gender="female" bind:tap="onLabelClick" class="{{sex === 'female' ? 'selected gender-input' : 'gender-input'}}">
+            <image src="../../../assets/female.png" class="gender-image"></image>
+          </label>
+      </view>
+    </view>
+  </view>
+  <!--编辑个人信息-->
+  <!-- <view class="container">
+    <form catchsubmit="formSubmit" catchreset="formReset">
+      <block wx:if="{{active == 0 }}">
+        <picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">
+          <view class="sex">
+            <text>性别</text>
+            <view class="real">{{sex}}性</view>
+          </view>
+        </picker>
+      </block>
+
+      <block wx:if="{{active == 1 }}">
+        <picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">
+          <view class="height">
+            <text>身高</text>
+            <view class="real">{{height}}厘米</view>
+          </view>
+        </picker>
+      </block>
+
+      <block wx:if="{{active == 2 }}">
+        <picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">
+          <view class="weight">
+            <text>体重</text>
+            <view class="real">{{weight}}公斤</view>
+          </view>
+        </picker>
+      </block>
+
+      <block wx:if="{{active == 3 }}">
+        <picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">
+          <view class="age">
+            <text>年龄</text>
+            <view class="real">{{age}}岁</view>
+          </view>
+        </picker>
+      </block>
+
+      <block wx:if="{{active == 4 }}">
+        <picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">
+          <view class="walk">
+            <text>当前步数</text>
+            <view class="real">{{walk}}步</view>
+          </view>
+        </picker>
+      </block>
+    </form>
+  </view> -->
+
 </view>
-
-<!-- 填充 -->
-<view class="no-order" wx:if="{{orderList.length == 0&&!loading}}">
-  <image class="img" src="/assets/noOrder.png"></image>
-
-</view>
-
-
-
-<!--编辑个人信息-->
-<view class="container">
-<form catchsubmit="formSubmit" catchreset="formReset">
-
-<picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">
-<view class="sex">
-  <text>性别</text>
-     <view class="real">{{sex}}性</view> 
-</view>
-</picker>
-
-<picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">
-<view class="height">
-  <text>身高</text>
-     <view class="real">{{height}}厘米</view>
-</view>
-</picker>
-
-<picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">
-<view class="weight">
-  <text>体重</text>
-     <view class="real">{{weight}}公斤</view>
-</view>
-</picker>
-
-<picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">
-<view class="age">
-  <text>年龄</text>
-     <view class="real">{{age}}岁</view> 
-</view>
-</picker>
-
-<picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">
-<view class="walk">
-  <text>当前步数</text>
-     <view class="real">{{walk}}步</view> 
-</view>
-</picker>
-
-<button bind:tap="saveSuccess" type="primary">保存</button>
-</form>
-</view>
-
-<van-dialog confirm-button-color="#b4282d" id="van-dialog" />

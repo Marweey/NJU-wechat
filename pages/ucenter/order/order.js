@@ -28,7 +28,7 @@ Page({
     weightIndex: wx.getStorageSync('weightIndex'),
     ageIndex: wx.getStorageSync('ageIndex'),
     walkIndex: wx.getStorageSync('walkIndex'),
-    
+    male_image:"/assets/male.png",
 
   },
 
@@ -150,8 +150,10 @@ saveDataWithDate: function (data) {
         active: type
       })
     }
-    // 模拟加载数据
-    // this.loadData(type)
+    let male_base64 = wx.getFileSystemManager().readFileSync(this.data.background, 'base64');
+    this.setData({
+     'male_image': 'data:image/png;base64,' + male_base64
+    });
   },
 
   /**
@@ -214,31 +216,27 @@ saveDataWithDate: function (data) {
   
    
 
-  // loadData: function (type) {
-  //   this.setData({
-  //     loading: true
-  //   })
-  //   if (type && type != 0) {
-  //     let data = this.data.order.filter(item => item.orderStatus == type);
-  //     this.setData({
-  //       orderList: data,
-  //       loading: false
-  //     })
-  //   } else {
-  //     let that = this;
-  //     setTimeout(function () {
-  //       that.setData({
-  //         loading: false,
-  //         orderList: that.data.order
-  //       })
-  //     }, 1000)
-  //   }
-  // },
-  // changeTab: function (e) {
-  //   let type = e.detail.index;
-  //   // 模拟加载数据
-  //   this.loadData(type)
-  // },
+  onLabelClick: function (event) {
+    // 获取点击的 label 的 for 属性值，即性别值
+    var selectedGender = event.currentTarget.dataset.gender;
+    console.log(selectedGender)
+    // 更新性别字段和样式
+    wx.setStorageSync('sex', selectedGender);
+    this.setData({
+      sex: selectedGender
+    });
+    this.onShow()
+  },
+
+  
+  changeTab: function (e) {
+    let type = e.detail.index;
+    console.log(type)
+    // 模拟加载数据
+    this.setData({
+      active:type
+    })
+  },
   scrollListen: function (e) {
     console.log("滑到底部啦 该加载下一页数据啦")
   }
