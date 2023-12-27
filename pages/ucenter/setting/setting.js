@@ -99,7 +99,7 @@ Page({
     Dialog.alert({
       title: '关于',
       // message: '版本号：1.0.0 By: Group39 何沛阳 马维艺 王文卓 张乃凡 张翼'
-      message: '版本号：2.0.0 By:Group39 游莫凡 马维艺 王文卓'
+      message: '版本号：2.0.0 By:Group38 游莫凡 马维艺 王文卓'
     }).then(() => {
       // on close
     });
