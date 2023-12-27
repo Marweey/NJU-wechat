@@ -1,12 +1,30 @@
 // pages/ucenter/order/order.js
 import Dialog from '../../../lib/vant-weapp/dialog/dialog';
 const app = getApp();
+const btnText = {
+  nologin: 'Login',
+  pending: 'In sync...',
+  success: 'Synchronized',
+  error: 'Sync to PMS',
+}
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    weRunData:'',
+    stepInfoList:'',
+    btnText: '再接再厉',
+    btnClass: 'syan_button',
+    stepData: {
+      today: 0,
+      calories: 0,
+      weekly: 0,
+      monthly: 0,
+    },
+
+
     active: 0,
     loading: false,
     orderList: [],
@@ -28,7 +46,6 @@ Page({
     weightIndex: wx.getStorageSync('weightIndex'),
     ageIndex: wx.getStorageSync('ageIndex'),
     walkIndex: wx.getStorageSync('walkIndex'),
-    male_image:"/assets/male.png",
 
   },
 
@@ -142,19 +159,14 @@ saveDataWithDate: function (data) {
     wx.setNavigationBarTitle({
       title: '我的信息',
     })
-    //this.formReset
-    // 获取参数
     let type = options.type;
     if (type) {
       this.setData({
         active: type
       })
     }
-    let male_base64 = wx.getFileSystemManager().readFileSync(this.data.background, 'base64');
-    this.setData({
-     'male_image': 'data:image/png;base64,' + male_base64
-    });
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -167,6 +179,7 @@ saveDataWithDate: function (data) {
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    this.authorizeWeRun()
     this.setData({
       sex:wx.getStorageSync('sex'),
       height:wx.getStorageSync('height'),
@@ -239,5 +252,66 @@ saveDataWithDate: function (data) {
   },
   scrollListen: function (e) {
     console.log("滑到底部啦 该加载下一页数据啦")
-  }
+  },
+
+
+  // 用户授权读取微信运动数据
+authorizeWeRun(){
+  var that = this
+  //首先获取用户的授权状态
+  wx.getSetting({
+    success(res){
+      // console.log (res)
+      if(!res.authSetting['scope.werun']){
+        // 如果用户还未授权过，需要用户授权读取微信运动数据
+        wx.authorize({
+          scope: 'scope.werun',
+          success() {
+            //读取微信步数数据
+            that.getWeRunData()
+          },
+          fail() {
+            //如果用户拒绝授权，提示用户需要同意授权才能获取他的微信运动数据
+            wx.showModal({
+              title: '读取微信运动数据失败',
+              content: '请在小程序设置界面（「右上角」 - 「关于」 - 「右上角」 - 「设置」）中允许我们访问微信运动数据',
+            })
+          }
+        })
+      }else{
+        //如果用户已授权过，直接开始同步微信运动数据
+        //读取微信步数数据
+        that.getWeRunData()
+      }
+    }
+  })
+},
+
+// 获取微信运动数据
+getWeRunData(){
+  var that = this
+  wx.cloud.init()
+  wx.getWeRunData({
+    success(res){
+      console.log(res)
+      wx.cloud.callFunction({
+        name:'desrundata',
+        data:{
+          weRunData: wx.cloud.CloudID(res.cloudID) //直到云函数被替换
+        }
+      }).then(res=>{
+        console.log(res)
+        that.setData({
+          stepInfoList: res.result
+        })
+      })
+    }
+  })
+
+
+},
+
+
+
+
 })

@@ -1,20 +1,17 @@
 <!--pages/ucenter/order/order.wxml-->
 <view class="box">
-  <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="5" swipeable bind:change="changeTab" class="nav">
+  <van-tabs color="#b4282d" active="{{active}}" tab-class="tab" swipe-threshold="3" swipeable bind:change="changeTab" class="nav">
     <van-tab title="性别"></van-tab>
-    <van-tab title="身高"></van-tab>
-    <van-tab title="体重"></van-tab>
-    <van-tab title="年龄"></van-tab>
+    <van-tab title="其他数据"></van-tab>
     <van-tab title="步数"></van-tab>
   </van-tabs>
 
 
-
-
-  <view class="container1">
-    <view class="card">
-      <view class="title">设置性别</view>
-      <view class="gender">
+  <block wx:if="{{active == 0}}">
+    <view class="container1">
+      <view class="card">
+        <view class="title">设置性别</view>
+        <view class="gender">
           <input type="radio" id="male" name="gender" data-gender="male" value="male" checked="{{sex === 'male'}}">
           </input>
           <label for="male" data-gender="male" bind:tap="onLabelClick" class="{{sex === 'male' ? 'selected gender-input' : 'gender-input'}}">
@@ -24,12 +21,14 @@
           <label for="female" data-gender="female" bind:tap="onLabelClick" class="{{sex === 'female' ? 'selected gender-input' : 'gender-input'}}">
             <image src="../../../assets/female.png" class="gender-image"></image>
           </label>
+        </view>
       </view>
     </view>
-  </view>
+  </block>
   <!--编辑个人信息-->
-  <!-- <view class="container">
-    <form catchsubmit="formSubmit" catchreset="formReset">
+  <block wx:if="{{active == 1 }}">
+    <view class="container">
+      <!-- <form catchsubmit="formSubmit" catchreset="formReset"> 
       <block wx:if="{{active == 0 }}">
         <picker value="{{sexIndex}}" range="{{sexrange}}" bindchange="sexPickerBindchange">
           <view class="sex">
@@ -37,44 +36,63 @@
             <view class="real">{{sex}}性</view>
           </view>
         </picker>
-      </block>
+      </block> -->
 
-      <block wx:if="{{active == 1 }}">
-        <picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">
-          <view class="height">
-            <text>身高</text>
-            <view class="real">{{height}}厘米</view>
-          </view>
-        </picker>
-      </block>
 
-      <block wx:if="{{active == 2 }}">
-        <picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">
-          <view class="weight">
-            <text>体重</text>
-            <view class="real">{{weight}}公斤</view>
-          </view>
-        </picker>
-      </block>
+      <picker value="{{heightIndex}}" range="{{heightRange}}" bindchange="heightPickerBindchange">
+        <view class="height">
+          <text>身高</text>
+          <view class="real">{{height}}厘米</view>
+        </view>
+      </picker>
 
-      <block wx:if="{{active == 3 }}">
-        <picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">
-          <view class="age">
-            <text>年龄</text>
-            <view class="real">{{age}}岁</view>
-          </view>
-        </picker>
-      </block>
 
-      <block wx:if="{{active == 4 }}">
-        <picker value="{{walkIndex}}" range="{{walkrange}}" bindchange="walkPickerBindchange">
-          <view class="walk">
-            <text>当前步数</text>
-            <view class="real">{{walk}}步</view>
-          </view>
-        </picker>
-      </block>
-    </form>
-  </view> -->
+
+      <picker value="{{weightIndex}}" range="{{weightRange}}" bindchange="weightPickerBindchange">
+        <view class="weight">
+          <text>体重</text>
+          <view class="real">{{weight}}公斤</view>
+        </view>
+      </picker>
+
+
+
+      <picker value="{{ageIndex}}" range="{{agerange}}" bindchange="datePickerBindchange">
+        <view class="age">
+          <text>年龄</text>
+          <view class="real">{{age}}岁</view>
+        </view>
+      </picker>
+    </view>
+  </block>
+  <block wx:if="{{active == 2 }}">
+    <view class="container_step">
+      <canvas canvas-id="today_chart" class="today_chart" />
+      <canvas canvas-id="week_chart" class="week_chart" />
+
+      <view class="weui-flex">
+        <view class="weui-flex__item data">
+          <view class='data_attr'>Calories</view>
+          <view class='data_val'>{{stepData.calories}}</view>
+        </view>
+        <view class="weui-flex__item data">
+          <view class='data_attr'>Weekly</view>
+          <view class='data_val'>{{stepData.weekly}}</view>
+        </view>
+        <view class="weui-flex__item data">
+          <view class='data_attr'>Monthly</view>
+          <view class='data_val'>{{stepData.monthly}}</view>
+        </view>
+      </view>
+      <view class="today_setp">
+        <view class="today_step_attr">today</view>
+        <view class="today_step_val">{{stepData.today}}</view>
+      </view>
+      <view class="{{btnClass}}" bindtap="onClickBtn">
+        {{btnText}}
+      </view>
+    </view>
+  </block>
+  <!-- </form> -->
 
 </view>

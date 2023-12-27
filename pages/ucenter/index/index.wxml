@@ -55,17 +55,17 @@
         </i-badge>
         <text class="txt">身高</text>
       </view>
-      <view class="icon-wrap" id="2" bindtap="toOrder">
+      <view class="icon-wrap" id="1" bindtap="toOrder">
         <i-badge count="{{order.send}}">
           <image class="icon" src="/assets/weight.png"></image>
         </i-badge>
         <text class="txt">体重</text>
       </view>
-      <view class="icon-wrap" id="3" bindtap="toOrder">
+      <view class="icon-wrap" id="1" bindtap="toOrder">
         <image class="icon" src="/assets/age.png"></image>
         <text class="txt">年龄</text>
       </view>
-      <view class="icon-wrap" id="4" bindtap="toOrder">
+      <view class="icon-wrap" id="2" bindtap="toOrder">
         <i-badge count="{{order.afterSale}}">
           <image class="icon" src="/assets/walk.png"></image>
         </i-badge>
