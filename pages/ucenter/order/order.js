@@ -290,7 +290,7 @@ authorizeWeRun(){
 // 获取微信运动数据
 getWeRunData(){
   var that = this
-  wx.cloud.init()
+  // wx.cloud.init()
   wx.getWeRunData({
     success(res){
       console.log(res)
