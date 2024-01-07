@@ -77,7 +77,7 @@ Page({
       sport_percent:percent2,
       bmi:bmi_,
     }),
-
+    
     // 步数模块
       this.feet_drawProgressbg(); 
       this.feet_drawCircle(percent1*2) ;
@@ -117,6 +117,7 @@ Page({
      if(percent1>1){
        percent1=1;
      }
+     console.log(percent2)
     this.setData({
       Time:time,
       Date: date,
@@ -128,7 +129,6 @@ Page({
       sport_percent:percent2,
       bmi:bmi_,
     }),
-
     // 步数模块
       this.feet_drawProgressbg(); 
       this.feet_drawCircle(percent1*2) ;

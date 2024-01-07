@@ -5,9 +5,9 @@
     <text>     kcal</text>
   </view>
   <view class="form-container">
-    <input class="consume_input" auto-focus type="number" name="consume" placeholder="请输入新增消耗量" />
-    <button class="wehx-foot-btn" formType="submit">确定</button>
-    <button class="wehx-foot-btn" style="background-color: red;" formType="reset">重置</button>
+    <input class="consume_input" auto-focus type="number" name="consume" placeholder="请输入新增消耗量" model:value="{{input_consume_data}}" />
+    <button class="wehx-foot-btn" formType="submit" bind:tap="_bindconfirm" >确定</button>
+    <button class="wehx-foot-btn" style="background-color: red;" bind:tap="func_reset">重置</button>
   </view>
   <text class="tip">
   各运动参考热量
