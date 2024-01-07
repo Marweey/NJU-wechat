@@ -63,6 +63,7 @@
           <view class="real">{{age}}岁</view>
         </view>
       </picker>
+      <button bind:tap="saveSuccess" type="primary">保存</button>
     </view>
   </block>
   <block wx:if="{{active == 2 }}">
@@ -96,3 +97,4 @@
   <!-- </form> -->
 
 </view>
+<van-dialog confirm-button-color="#b4282d" id="van-dialog" />
