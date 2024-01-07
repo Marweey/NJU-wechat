@@ -9,7 +9,7 @@ Page({
   onLoad(){
     var that = this;
     var DATE = new Date();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
     let end 
     wx.getStorage({
       key: date+'sport_consume_storage',
@@ -46,7 +46,7 @@ Page({
   _bindconfirm:function(e){
     var that = this;
     var DATE = new Date();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
     let checkNull = e.detail.value.consume
     if (!checkNull.trim()) {
       // 如果输入为空，弹出提示
@@ -91,7 +91,7 @@ Page({
 onShow(){
     var that = this;
     var DATE = new Date();
-    var date = DATE.getMonth()+'/'+DATE.getDate();
+    var date = DATE.getMonth()+1+'/'+DATE.getDate();
     let end 
     wx.getStorage({
       key: date+'sport_consume_storage',
